@@ -105,7 +105,21 @@
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         NSDate *object = _objects[indexPath.row];
         [[segue destinationViewController] setDetailItem:object];
+    } else if ([[segue identifier] isEqualToString:@"form"]) {
+        UINavigationController *navigationController = segue.destinationViewController;
+        FormViewController *formViewController = [[navigationController viewControllers] objectAtIndex:0];
+        formViewController.delegate = self;
     }
+}
+
+#pragma mark - FormViewControllerDelegate
+
+- (void)formViewControllerDidSave:(FormViewController *)controller {
+    [self dismissViewControllerAnimated:YES completion:nil];
+}
+
+- (void)formViewControllerDidCancel:(FormViewController *)controller {
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

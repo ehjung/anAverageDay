@@ -10,4 +10,13 @@
 
 @implementation FormViewController
 
+@synthesize delegate;
+
+- (IBAction)cancel:(id)sender {
+    [self.delegate formViewControllerDidCancel:self];
+}
+- (IBAction)save:(id)sender {
+    [self.delegate formViewControllerDidSave:self];
+}
+
 @end

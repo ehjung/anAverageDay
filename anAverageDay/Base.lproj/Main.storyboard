@@ -43,8 +43,16 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Add Entry" id="SPq-PR-UiR">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="d8q-mx-nfA"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="DLn-Hr-ipa"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="d8q-mx-nfA">
+                            <connections>
+                                <action selector="cancel:" destination="erO-2g-i7o" id="Xjr-li-I0k"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="DLn-Hr-ipa">
+                            <connections>
+                                <action selector="save:" destination="erO-2g-i7o" id="kOQ-PP-3cE"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="94s-Sh-v6Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -91,7 +99,7 @@
                     <navigationItem key="navigationItem" title="An Average Day" id="tQt-TN-PWz">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="qZb-FL-gDA">
                             <connections>
-                                <segue destination="NrK-Oa-y3C" kind="modal" id="swd-DE-m2F"/>
+                                <segue destination="NrK-Oa-y3C" kind="modal" identifier="form" id="swd-DE-m2F"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -139,7 +147,7 @@
         <!--Navigation Controller-->
         <scene sceneID="BmZ-jR-RAO">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NrK-Oa-y3C" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalTransitionStyle="crossDissolve" id="NrK-Oa-y3C" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="zXq-Yr-ftw">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>

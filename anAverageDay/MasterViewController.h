@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FormViewController.h"
 
-@interface MasterViewController : UITableViewController
+@interface MasterViewController : UITableViewController <FormViewControllerDelegate>
 
 @end

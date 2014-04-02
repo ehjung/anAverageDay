@@ -8,8 +8,20 @@
 
 #import <Foundation/Foundation.h>
 
+@class FormViewController;
+
+@protocol FormViewControllerDelegate <NSObject>
+
+- (void)formViewControllerDidCancel:(FormViewController *)controller;
+- (void)formViewControllerDidSave:(FormViewController *)controller;
+
+@end
+
 @interface FormViewController : UITableViewController
 
-@property (strong, nonatomic) IBOutlet UILabel *text;
+@property (nonatomic, weak) id <FormViewControllerDelegate> delegate;
+
+- (IBAction)cancel:(id)sender;
+- (IBAction)save:(id)sender;
 
 @end
