@@ -7,8 +7,13 @@
 //
 
 #import "AppDelegate.h"
+#import "Entry.h"
+#import "MasterViewController.h"
 
-@implementation AppDelegate
+@implementation AppDelegate {
+    NSMutableArray *entries;
+}
+
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {

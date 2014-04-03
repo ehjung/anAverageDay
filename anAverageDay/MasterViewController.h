@@ -11,4 +11,6 @@
 
 @interface MasterViewController : UITableViewController <FormViewControllerDelegate>
 
+@property (nonatomic, strong) NSMutableArray *entries;
+
 @end

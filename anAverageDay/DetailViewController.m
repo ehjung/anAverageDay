@@ -14,6 +14,19 @@
 
 @implementation DetailViewController
 
+- (id)initWithCoder:(NSCoder *)aDecoder
+{
+	if ((self = [super initWithCoder:aDecoder]))
+	{
+		NSLog(@"init PlayerDetailsViewController");
+	}
+	return self;
+}
+- (void)dealloc
+{
+	NSLog(@"dealloc PlayerDetailsViewController");
+}
+
 #pragma mark - Managing the detail item
 
 - (void)setDetailItem:(id)newDetailItem

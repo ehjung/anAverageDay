@@ -7,8 +7,8 @@
 //
 
 #import "MasterViewController.h"
-
 #import "DetailViewController.h"
+#import "Entry.h"
 
 @interface MasterViewController () {
     NSMutableArray *_objects;
@@ -16,6 +16,13 @@
 @end
 
 @implementation MasterViewController
+
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    if( self = [super initWithCoder:aDecoder] ) {
+        self.entries = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
 
 - (void)awakeFromNib
 {
@@ -55,15 +62,15 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return _objects.count;
+    return [self.entries count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
-    NSDate *object = _objects[indexPath.row];
-    cell.textLabel.text = [object description];
+    Entry *entry = self.entries[indexPath.row];
+    cell.textLabel.text = entry.title;
     return cell;
 }
 
@@ -103,8 +110,8 @@
 {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        NSDate *object = _objects[indexPath.row];
-        [[segue destinationViewController] setDetailItem:object];
+        Entry *entry = self.entries[indexPath.row];
+        [[segue destinationViewController] setDetailItem:entry];
     } else if ([[segue identifier] isEqualToString:@"form"]) {
         UINavigationController *navigationController = segue.destinationViewController;
         FormViewController *formViewController = [[navigationController viewControllers] objectAtIndex:0];
@@ -114,7 +121,15 @@
 
 #pragma mark - FormViewControllerDelegate
 
-- (void)formViewControllerDidSave:(FormViewController *)controller {
+
+- (void)formViewController:(FormViewController *)controller didAddEntry:(Entry *)entry {
+    if( 0 == entry.title.length ) {
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"MMM-dd-yyyy HH:mm:ss a"];
+        entry.title = [dateFormatter stringFromDate:[NSDate date]];
+    }
+    [self.entries addObject:entry];
+    [self.tableView reloadData];
     [self dismissViewControllerAnimated:YES completion:nil];
 }
 
