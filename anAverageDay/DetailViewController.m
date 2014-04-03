@@ -29,10 +29,10 @@
 
 #pragma mark - Managing the detail item
 
-- (void)setDetailItem:(id)newDetailItem
+- (void)setEntryDetail:(Entry *)newEntryDetail
 {
-    if (_detailItem != newDetailItem) {
-        _detailItem = newDetailItem;
+    if (_entryDetail != newEntryDetail) {
+        _entryDetail = newEntryDetail;
         
         // Update the view.
         [self configureView];
@@ -43,8 +43,8 @@
 {
     // Update the user interface for the detail item.
 
-    if (self.detailItem) {
-        self.detailDescriptionLabel.text = [self.detailItem description];
+    if( self.entryDetail ) {
+        self.detailDescriptionLabel.text = self.entryDetail.title;
     }
 }
 

@@ -111,7 +111,7 @@
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
         Entry *entry = self.entries[indexPath.row];
-        [[segue destinationViewController] setDetailItem:entry];
+        [[segue destinationViewController] setEntryDetail:entry];
     } else if ([[segue identifier] isEqualToString:@"form"]) {
         UINavigationController *navigationController = segue.destinationViewController;
         FormViewController *formViewController = [[navigationController viewControllers] objectAtIndex:0];
@@ -128,7 +128,7 @@
         [dateFormatter setDateFormat:@"MMM-dd-yyyy HH:mm:ss a"];
         entry.title = [dateFormatter stringFromDate:[NSDate date]];
     }
-    [self.entries addObject:entry];
+    [self.entries insertObject:entry atIndex:0];
     [self.tableView reloadData];
     [self dismissViewControllerAnimated:YES completion:nil];
 }

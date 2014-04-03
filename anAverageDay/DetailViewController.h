@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Entry.h"
 
-@interface DetailViewController : UIViewController
+@interface DetailViewController : UITableViewController
 
-@property (strong, nonatomic) id detailItem;
+@property (strong, nonatomic) Entry *entryDetail;
 
 @property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
 @end
