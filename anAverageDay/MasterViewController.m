@@ -123,11 +123,6 @@
 
 
 - (void)formViewController:(FormViewController *)controller didAddEntry:(Entry *)entry {
-    if( 0 == entry.title.length ) {
-        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        [dateFormatter setDateFormat:@"MMM-dd-yyyy HH:mm:ss a"];
-        entry.title = [dateFormatter stringFromDate:[NSDate date]];
-    }
     [self.appDelegate.entries insertObject:entry atIndex:0];
     [self.tableView reloadData];
     [self dismissViewControllerAnimated:YES completion:nil];

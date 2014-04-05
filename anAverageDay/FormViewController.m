@@ -17,13 +17,21 @@
 }
 - (IBAction)save:(id)sender {
     Entry *entry = [[Entry alloc] init];
-    entry.title = self.titleTextField.text;
-    entry.detail = self.titleTextField.text;
+    [self setEntryTitle:entry];
+    entry.detail = entry.title;
     entry.detail = [entry.detail stringByAppendingString: self.snackTextField.text];
     entry.detail = [entry.detail stringByAppendingString: self.breakTextField.text];
     entry.detail = [entry.detail stringByAppendingString: self.lunchTextField.text];
     entry.detail = [entry.detail stringByAppendingString: self.dinnerTextField.text];
     [self.delegate formViewController:self didAddEntry:entry];
+}
+
+- (void)setEntryTitle:(Entry *)entry {
+    if( 0 == entry.title.length ) {
+        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+        [dateFormatter setDateFormat:@"MMM-dd-yyyy HH:mm:ss a"];
+        entry.title = [dateFormatter stringFromDate:[NSDate date]];
+    }
 }
 
 - (void)tableView:(UITableView *)tableView

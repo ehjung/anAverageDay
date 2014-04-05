@@ -7,10 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MasterViewController.h"
+#import "AppDelegate.h"
+#import "Entry.h"
 
-@interface EntryViewController : UITableViewController
+@interface EntryViewController : UIViewController <UIScrollViewDelegate>
 
 @property (nonatomic, strong) AppDelegate *appDelegate;
+@property (nonatomic, strong) IBOutlet UIScrollView *scrollView;
 
 @end

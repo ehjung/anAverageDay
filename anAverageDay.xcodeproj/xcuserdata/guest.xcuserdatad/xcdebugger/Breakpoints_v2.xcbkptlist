@@ -41,7 +41,7 @@
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "anAverageDay/EntryViewController.m"
+            filePath = "anAverageDay/ViewController.m"
             timestampString = "418366233.87012"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
