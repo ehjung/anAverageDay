@@ -15,7 +15,6 @@
 		AC1DF12418EC865800DE7E1A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1DF12318EC865800DE7E1A /* AppDelegate.m */; };
 		AC1DF12718EC865800DE7E1A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC1DF12518EC865800DE7E1A /* Main.storyboard */; };
 		AC1DF12A18EC865800DE7E1A /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1DF12918EC865800DE7E1A /* MasterViewController.m */; };
-		AC1DF12D18EC865800DE7E1A /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1DF12C18EC865800DE7E1A /* DetailViewController.m */; };
 		AC1DF12F18EC865800DE7E1A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC1DF12E18EC865800DE7E1A /* Images.xcassets */; };
 		AC1DF13618EC865800DE7E1A /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC1DF13518EC865800DE7E1A /* XCTest.framework */; };
 		AC1DF13718EC865800DE7E1A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC1DF11318EC865800DE7E1A /* Foundation.framework */; };
@@ -51,8 +50,6 @@
 		AC1DF12618EC865800DE7E1A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		AC1DF12818EC865800DE7E1A /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
 		AC1DF12918EC865800DE7E1A /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
-		AC1DF12B18EC865800DE7E1A /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
-		AC1DF12C18EC865800DE7E1A /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
 		AC1DF12E18EC865800DE7E1A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		AC1DF13418EC865800DE7E1A /* anAverageDayTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = anAverageDayTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC1DF13518EC865800DE7E1A /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
@@ -129,8 +126,6 @@
 				AC1DF12518EC865800DE7E1A /* Main.storyboard */,
 				AC1DF12818EC865800DE7E1A /* MasterViewController.h */,
 				AC1DF12918EC865800DE7E1A /* MasterViewController.m */,
-				AC1DF12B18EC865800DE7E1A /* DetailViewController.h */,
-				AC1DF12C18EC865800DE7E1A /* DetailViewController.m */,
 				AC88C2F018EFBD0B00228C60 /* EntryViewController.h */,
 				AC88C2F118EFBD0B00228C60 /* EntryViewController.m */,
 				AC1DF12E18EC865800DE7E1A /* Images.xcassets */,
@@ -275,7 +270,6 @@
 				AC1DF12A18EC865800DE7E1A /* MasterViewController.m in Sources */,
 				AC1DF12018EC865800DE7E1A /* main.m in Sources */,
 				AC1DF14D18EC8C2F00DE7E1A /* FormViewController.m in Sources */,
-				AC1DF12D18EC865800DE7E1A /* DetailViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

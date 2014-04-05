@@ -18,6 +18,11 @@
 - (IBAction)save:(id)sender {
     Entry *entry = [[Entry alloc] init];
     entry.title = self.titleTextField.text;
+    entry.detail = self.titleTextField.text;
+    entry.detail = [entry.detail stringByAppendingString: self.snackTextField.text];
+    entry.detail = [entry.detail stringByAppendingString: self.breakTextField.text];
+    entry.detail = [entry.detail stringByAppendingString: self.lunchTextField.text];
+    entry.detail = [entry.detail stringByAppendingString: self.dinnerTextField.text];
     [self.delegate formViewController:self didAddEntry:entry];
 }
 

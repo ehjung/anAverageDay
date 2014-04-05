@@ -60,8 +60,9 @@ static NSString * entryCellIdentifier = @"entryCell";
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault  reuseIdentifier:entryCellIdentifier];
     }
     
-    Entry *entry = [self.appDelegate.entries objectAtIndex:indexPath.section];
-    cell.textLabel.text = entry.title;
+    NSUInteger index = [self.appDelegate.entries count] - indexPath.section - 1;
+    Entry *entry = [self.appDelegate.entries objectAtIndex:index];
+    cell.textLabel.text = entry.detail;
     return cell;
 }
 
