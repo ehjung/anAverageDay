@@ -22,6 +22,10 @@
 
 @property (nonatomic, weak) id <FormViewControllerDelegate> delegate;
 @property (strong, nonatomic) IBOutlet UITextField *titleTextField;
+@property (strong, nonatomic) IBOutlet UITextField *breakTextField;
+@property (strong, nonatomic) IBOutlet UITextField *lunchTextField;
+@property (strong, nonatomic) IBOutlet UITextField *dinnerTextField;
+@property (strong, nonatomic) IBOutlet UITextField *snackTextField;
 
 - (IBAction)cancel:(id)sender;
 - (IBAction)save:(id)sender;

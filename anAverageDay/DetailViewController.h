@@ -13,5 +13,5 @@
 
 @property (strong, nonatomic) Entry *entryDetail;
 
-@property (weak, nonatomic) IBOutlet UILabel *detailDescriptionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *title;
 @end

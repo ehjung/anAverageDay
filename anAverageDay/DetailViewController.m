@@ -44,7 +44,7 @@
     // Update the user interface for the detail item.
 
     if( self.entryDetail ) {
-        self.detailDescriptionLabel.text = self.entryDetail.title;
+//        self.detailDescriptionLabel.text = self.entryDetail.title;
     }
 }
 

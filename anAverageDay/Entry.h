@@ -11,5 +11,9 @@
 @interface Entry : NSObject
 
 @property (nonatomic, strong) NSString *title;
+@property (nonatomic, strong) NSString *breakfast;
+@property (nonatomic, strong) NSString *lunch;
+@property (nonatomic, strong) NSString *dinner;
+@property (nonatomic) NSUInteger *numberOfRows;
 
 @end
