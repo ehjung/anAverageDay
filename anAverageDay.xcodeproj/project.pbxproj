@@ -24,6 +24,7 @@
 		AC1DF14218EC865800DE7E1A /* anAverageDayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1DF14118EC865800DE7E1A /* anAverageDayTests.m */; };
 		AC1DF14D18EC8C2F00DE7E1A /* FormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1DF14C18EC8C2F00DE7E1A /* FormViewController.m */; };
 		AC1DF15018ECA9D800DE7E1A /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1DF14F18ECA9D800DE7E1A /* Entry.m */; };
+		AC88C2F218EFBD0B00228C60 /* EntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC88C2F118EFBD0B00228C60 /* EntryViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,8 @@
 		AC1DF14C18EC8C2F00DE7E1A /* FormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormViewController.m; sourceTree = "<group>"; };
 		AC1DF14E18ECA9D800DE7E1A /* Entry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entry.h; sourceTree = "<group>"; };
 		AC1DF14F18ECA9D800DE7E1A /* Entry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entry.m; sourceTree = "<group>"; };
+		AC88C2F018EFBD0B00228C60 /* EntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryViewController.h; sourceTree = "<group>"; };
+		AC88C2F118EFBD0B00228C60 /* EntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -128,6 +131,8 @@
 				AC1DF12918EC865800DE7E1A /* MasterViewController.m */,
 				AC1DF12B18EC865800DE7E1A /* DetailViewController.h */,
 				AC1DF12C18EC865800DE7E1A /* DetailViewController.m */,
+				AC88C2F018EFBD0B00228C60 /* EntryViewController.h */,
+				AC88C2F118EFBD0B00228C60 /* EntryViewController.m */,
 				AC1DF12E18EC865800DE7E1A /* Images.xcassets */,
 				AC1DF11A18EC865800DE7E1A /* Supporting Files */,
 				AC1DF14B18EC8C2F00DE7E1A /* FormViewController.h */,
@@ -264,6 +269,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC88C2F218EFBD0B00228C60 /* EntryViewController.m in Sources */,
 				AC1DF15018ECA9D800DE7E1A /* Entry.m in Sources */,
 				AC1DF12418EC865800DE7E1A /* AppDelegate.m in Sources */,
 				AC1DF12A18EC865800DE7E1A /* MasterViewController.m in Sources */,
@@ -474,6 +480,7 @@
 				AC1DF14718EC865800DE7E1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		AC1DF14818EC865800DE7E1A /* Build configuration list for PBXNativeTarget "anAverageDayTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +489,7 @@
 				AC1DF14A18EC865800DE7E1A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

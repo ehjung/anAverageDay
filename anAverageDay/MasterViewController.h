@@ -8,9 +8,10 @@
 
 #import <UIKit/UIKit.h>
 #import "FormViewController.h"
+#import "AppDelegate.h"
 
 @interface MasterViewController : UITableViewController <FormViewControllerDelegate>
 
-@property (nonatomic, strong) NSMutableArray *entries;
+@property (nonatomic, strong) AppDelegate* appDelegate;
 
 @end

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>801F82C3-AB3C-4BA3-B45C-F3F57C0C2824</string>
+	<key>IDESourceControlProjectName</key>
+	<string>anAverageDay</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B524E025-B49C-4F0E-BFAA-47910D3799E8</key>
+		<string>https://github.com/ehjung/anAverageDay.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>anAverageDay.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B524E025-B49C-4F0E-BFAA-47910D3799E8</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ehjung/anAverageDay.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B524E025-B49C-4F0E-BFAA-47910D3799E8</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B524E025-B49C-4F0E-BFAA-47910D3799E8</string>
+			<key>IDESourceControlWCCName</key>
+			<string>anAverageDay</string>
+		</dict>
+	</array>
+</dict>
+</plist>

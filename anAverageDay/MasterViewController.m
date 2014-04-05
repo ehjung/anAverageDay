@@ -19,7 +19,8 @@
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
     if( self = [super initWithCoder:aDecoder] ) {
-        self.entries = [[NSMutableArray alloc] init];
+        self.appDelegate = [[UIApplication sharedApplication] delegate];
+        self.appDelegate.entries = [[NSMutableArray alloc] init];
     }
     return self;
 }
@@ -62,14 +63,14 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [self.entries count];
+    return [self.appDelegate.entries count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
-    Entry *entry = self.entries[indexPath.row];
+    Entry *entry = self.appDelegate.entries[indexPath.row];
     cell.textLabel.text = entry.title;
     return cell;
 }
@@ -110,8 +111,8 @@
 {
     if ([[segue identifier] isEqualToString:@"showDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-        Entry *entry = self.entries[indexPath.row];
-        [[segue destinationViewController] setEntryDetail:entry];
+        Entry *entry = self.appDelegate.entries[indexPath.row];
+//        [[segue destinationViewController] setEntryDetail:entry];
     } else if ([[segue identifier] isEqualToString:@"form"]) {
         UINavigationController *navigationController = segue.destinationViewController;
         FormViewController *formViewController = [[navigationController viewControllers] objectAtIndex:0];
@@ -128,7 +129,7 @@
         [dateFormatter setDateFormat:@"MMM-dd-yyyy HH:mm:ss a"];
         entry.title = [dateFormatter stringFromDate:[NSDate date]];
     }
-    [self.entries insertObject:entry atIndex:0];
+    [self.appDelegate.entries insertObject:entry atIndex:0];
     [self.tableView reloadData];
     [self dismissViewControllerAnimated:YES completion:nil];
 }

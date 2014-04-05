@@ -1,0 +1,16 @@
+//
+//  EntryViewController.h
+//  anAverageDay
+//
+//  Created by esther on 4/5/14.
+//  Copyright (c) 2014 ehjung. All rights reserved.
+//
+
+#import <UIKit/UIKit.h>
+#import "MasterViewController.h"
+
+@interface EntryViewController : UITableViewController
+
+@property (nonatomic, strong) AppDelegate *appDelegate;
+
+@end
