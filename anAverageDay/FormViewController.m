@@ -19,10 +19,15 @@
     Entry *entry = [[Entry alloc] init];
     [self setEntryTitle:entry];
     entry.detail = entry.title;
-    entry.detail = [entry.detail stringByAppendingString: self.snackTextField.text];
+    entry.detail = [entry.detail stringByAppendingString: self.moodTextField.text];
+    entry.detail = [entry.detail stringByAppendingString: self.weatherTextField.text];
+    entry.detail = [entry.detail stringByAppendingString: self.locationTextField.text];
     entry.detail = [entry.detail stringByAppendingString: self.breakTextField.text];
     entry.detail = [entry.detail stringByAppendingString: self.lunchTextField.text];
     entry.detail = [entry.detail stringByAppendingString: self.dinnerTextField.text];
+    entry.detail = [entry.detail stringByAppendingString: self.snackTextField.text];
+    entry.detail = [entry.detail stringByAppendingString: self.extraTextField.text];
+    
     [self.delegate formViewController:self didAddEntry:entry];
 }
 
@@ -37,8 +42,9 @@
 - (void)tableView:(UITableView *)tableView
 didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	if (indexPath.section == 0)
+	if (indexPath.section == 0) {
 		[self.titleTextField becomeFirstResponder];
+    }
 }
 
 @end

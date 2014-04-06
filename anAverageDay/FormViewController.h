@@ -26,6 +26,10 @@
 @property (strong, nonatomic) IBOutlet UITextField *lunchTextField;
 @property (strong, nonatomic) IBOutlet UITextField *dinnerTextField;
 @property (strong, nonatomic) IBOutlet UITextField *snackTextField;
+@property (strong, nonatomic) IBOutlet UITextField *moodTextField;
+@property (strong, nonatomic) IBOutlet UITextField *weatherTextField;
+@property (strong, nonatomic) IBOutlet UITextField *locationTextField;
+@property (strong, nonatomic) IBOutlet UITextField *extraTextField;
 
 - (IBAction)cancel:(id)sender;
 - (IBAction)save:(id)sender;
