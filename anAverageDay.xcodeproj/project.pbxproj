@@ -23,7 +23,7 @@
 		AC1DF14218EC865800DE7E1A /* anAverageDayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1DF14118EC865800DE7E1A /* anAverageDayTests.m */; };
 		AC1DF14D18EC8C2F00DE7E1A /* FormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1DF14C18EC8C2F00DE7E1A /* FormViewController.m */; };
 		AC1DF15018ECA9D800DE7E1A /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1DF14F18ECA9D800DE7E1A /* Entry.m */; };
-		AC88C2FB18F0849200228C60 /* EntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC88C2FA18F0849200228C60 /* EntryViewController.m */; };
+		AC88C2FE18F1C52900228C60 /* EntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC88C2FD18F1C52900228C60 /* EntryViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,8 +60,8 @@
 		AC1DF14C18EC8C2F00DE7E1A /* FormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormViewController.m; sourceTree = "<group>"; };
 		AC1DF14E18ECA9D800DE7E1A /* Entry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entry.h; sourceTree = "<group>"; };
 		AC1DF14F18ECA9D800DE7E1A /* Entry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entry.m; sourceTree = "<group>"; };
-		AC88C2F918F0849200228C60 /* EntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryViewController.h; sourceTree = "<group>"; };
-		AC88C2FA18F0849200228C60 /* EntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryViewController.m; sourceTree = "<group>"; };
+		AC88C2FC18F1C52900228C60 /* EntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryViewController.h; sourceTree = "<group>"; };
+		AC88C2FD18F1C52900228C60 /* EntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,8 +126,8 @@
 				AC1DF12518EC865800DE7E1A /* Main.storyboard */,
 				AC1DF12818EC865800DE7E1A /* MasterViewController.h */,
 				AC1DF12918EC865800DE7E1A /* MasterViewController.m */,
-				AC88C2F918F0849200228C60 /* EntryViewController.h */,
-				AC88C2FA18F0849200228C60 /* EntryViewController.m */,
+				AC88C2FC18F1C52900228C60 /* EntryViewController.h */,
+				AC88C2FD18F1C52900228C60 /* EntryViewController.m */,
 				AC1DF14B18EC8C2F00DE7E1A /* FormViewController.h */,
 				AC1DF14C18EC8C2F00DE7E1A /* FormViewController.m */,
 				AC1DF14E18ECA9D800DE7E1A /* Entry.h */,
@@ -264,7 +264,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AC88C2FB18F0849200228C60 /* EntryViewController.m in Sources */,
+				AC88C2FE18F1C52900228C60 /* EntryViewController.m in Sources */,
 				AC1DF15018ECA9D800DE7E1A /* Entry.m in Sources */,
 				AC1DF12418EC865800DE7E1A /* AppDelegate.m in Sources */,
 				AC1DF12A18EC865800DE7E1A /* MasterViewController.m in Sources */,

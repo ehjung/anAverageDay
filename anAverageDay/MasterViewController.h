@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "FormViewController.h"
 #import "AppDelegate.h"
+#import "Entry.h"
 
 @interface MasterViewController : UITableViewController <FormViewControllerDelegate>
 

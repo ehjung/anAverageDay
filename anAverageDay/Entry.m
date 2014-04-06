@@ -10,4 +10,11 @@
 
 @implementation Entry
 
+- (id)init {
+    if( self = [super init] ) {
+        self.content = [[NSMutableArray alloc] init];
+    }
+    return self;
+}
+
 @end

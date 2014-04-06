@@ -10,8 +10,7 @@
 
 @interface Entry : NSObject
 
-@property (nonatomic, strong) NSMutableAttributedString *title;
-@property (nonatomic, strong) NSMutableAttributedString *mood;
-@property (nonatomic, strong) NSMutableAttributedString *weather;
+@property (nonatomic, strong) NSString *title;
+@property (nonatomic, strong) NSMutableArray *content;
 
 @end

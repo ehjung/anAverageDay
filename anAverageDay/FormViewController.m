@@ -19,9 +19,10 @@
     Entry *entry = [[Entry alloc] init];
     [self setEntryTitle:entry];
     
-    entry.title = [self formatString:self.titleTextField.text sectionLabel:@"TITLE "];
-    entry.mood = [self formatString:self.moodTextField.text sectionLabel:@"MOOD "];
-    entry.weather = [self formatString:self.weatherTextField.text sectionLabel:@"WEATHER "];
+    entry.title = self.titleTextField.text;
+    [entry.content addObject:[self formatString:self.titleTextField.text sectionLabel:@"TITLE "]];
+    [entry.content addObject:[self formatString:self.moodTextField.text sectionLabel:@"MOOD "]];
+    [entry.content addObject:[self formatString:self.weatherTextField.text sectionLabel:@"WEATHER "]];
     
     [self.delegate formViewController:self didAddEntry:entry];
 }

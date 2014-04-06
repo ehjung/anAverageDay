@@ -8,6 +8,7 @@
 
 #import "MasterViewController.h"
 #import "Entry.h"
+#import "EntryViewController.h"
 
 @interface MasterViewController () {
     NSMutableArray *_objects;
@@ -70,7 +71,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
     Entry *entry = self.appDelegate.entries[indexPath.row];
-    cell.textLabel.attributedText = entry.title;
+    cell.textLabel.text = entry.title;
     return cell;
 }
 
@@ -108,10 +109,11 @@
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([[segue identifier] isEqualToString:@"showDetail"]) {
+    if ([[segue identifier] isEqualToString:@"showEntryDetail"]) {
         NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+        EntryViewController *destViewController = segue.destinationViewController;
         Entry *entry = self.appDelegate.entries[indexPath.row];
-//        [[segue destinationViewController] setEntryDetail:entry];
+        destViewController.entry = entry;
     } else if ([[segue identifier] isEqualToString:@"form"]) {
         UINavigationController *navigationController = segue.destinationViewController;
         FormViewController *formViewController = [[navigationController viewControllers] objectAtIndex:0];
