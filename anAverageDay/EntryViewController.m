@@ -19,6 +19,7 @@ static NSString * entryCellIdentifier = @"entryCell";
 - (id)initWithCoder:(NSCoder *)aDecoder {
     if( self = [super initWithCoder:aDecoder] ) {
         self.appDelegate = [[UIApplication sharedApplication] delegate];
+        self.yPosition = 0;
     }
     return self;
 }
@@ -43,14 +44,22 @@ static NSString * entryCellIdentifier = @"entryCell";
     
     self.scrollView.pagingEnabled = YES;
     self.scrollView.delegate = self;
+
+    [self addContent:entry.title];
+    [self addContent:entry.mood];
+    [self addContent:entry.weather];
     
-    UITextView *textView = [[UITextView alloc] initWithFrame:frame];
-    textView.text = entry.detail;
-    textView.editable = NO;
-    
-    [self.scrollView addSubview:textView];
     [self.scrollView reloadInputViews];
     [self.view addSubview:self.scrollView];
+}
+
+- (void)addContent:(NSAttributedString *)content {
+    if( 0 != content.length ) {
+        UILabel *textView = [[UILabel alloc] initWithFrame:CGRectMake(10, self.yPosition, self.view.bounds.size.width, 40)];
+        self.yPosition += 40;
+        textView.attributedText = content;
+        [self.scrollView addSubview:textView];
+    }
 }
 
 - (void)didReceiveMemoryWarning

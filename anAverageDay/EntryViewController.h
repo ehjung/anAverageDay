@@ -14,5 +14,6 @@
 
 @property (nonatomic, strong) AppDelegate *appDelegate;
 @property (nonatomic, strong) IBOutlet UIScrollView *scrollView;
+@property (nonatomic) CGFloat yPosition;
 
 @end

@@ -70,7 +70,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
 
     Entry *entry = self.appDelegate.entries[indexPath.row];
-    cell.textLabel.text = entry.title;
+    cell.textLabel.attributedText = entry.title;
     return cell;
 }
 
