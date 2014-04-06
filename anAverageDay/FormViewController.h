@@ -21,6 +21,8 @@
 @interface FormViewController : UITableViewController
 
 @property (nonatomic, weak) id <FormViewControllerDelegate> delegate;
+@property (nonatomic, strong) Entry *entry;
+
 @property (strong, nonatomic) IBOutlet UITextField *titleTextField;
 @property (strong, nonatomic) IBOutlet UITextField *breakTextField;
 @property (strong, nonatomic) IBOutlet UITextField *lunchTextField;

@@ -16,21 +16,28 @@
     [self.delegate formViewControllerDidCancel:self];
 }
 - (IBAction)save:(id)sender {
-    Entry *entry = [[Entry alloc] init];
-    [self setEntryTitle:entry];
+    self.entry = [[Entry alloc] init];
+    [self setEntryTitle:self.entry];
     
-    entry.title = self.titleTextField.text;
-    [entry.content addObject:[self formatString:self.titleTextField.text sectionLabel:@"TITLE "]];
-    [entry.content addObject:[self formatString:self.moodTextField.text sectionLabel:@"MOOD "]];
-    [entry.content addObject:[self formatString:self.weatherTextField.text sectionLabel:@"WEATHER "]];
-    [entry.content addObject:[self formatString:self.locationTextField.text sectionLabel:@"LOCATION "]];
-    [entry.content addObject:[self formatString:self.breakTextField.text sectionLabel:@"BREAKFAST "]];
-    [entry.content addObject:[self formatString:self.lunchTextField.text sectionLabel:@"LUNCH "]];
-    [entry.content addObject:[self formatString:self.dinnerTextField.text sectionLabel:@"DINNER "]];
-    [entry.content addObject:[self formatString:self.snackTextField.text sectionLabel:@"SNACK "]];
-    [entry.content addObject:[self formatString:self.extraTextField.text sectionLabel:@"EXTRA "]];
+    self.entry.title = self.titleTextField.text;
+    [self addObject:self.titleTextField.text sectionLabel:@"TITLE "];
+    [self addObject:self.moodTextField.text sectionLabel:@"MOOD "];
+    [self addObject:self.weatherTextField.text sectionLabel:@"WEATHER "];
+    [self addObject:self.locationTextField.text sectionLabel:@"LOCATION "];
+    [self addObject:self.breakTextField.text sectionLabel:@"BREAKFAST "];
+    [self addObject:self.lunchTextField.text sectionLabel:@"LUNCH "];
+    [self addObject:self.dinnerTextField.text sectionLabel:@"DINNER "];
+    [self addObject:self.snackTextField.text sectionLabel:@"SNACK "];
+    [self addObject:self.extraTextField.text sectionLabel:@"EXTRA "];
     
-    [self.delegate formViewController:self didAddEntry:entry];
+    [self.delegate formViewController:self didAddEntry:self.entry];
+}
+
+- (void)addObject:(NSString *)text sectionLabel:(NSString *)sectionLabel {
+    NSAttributedString *formattedString = [self formatString:text sectionLabel:sectionLabel];
+    if( 0 != formattedString.length ) {
+        [self.entry.content addObject:formattedString];
+    }
 }
 
 - (NSMutableAttributedString *)formatString:(NSString *)string sectionLabel:(NSString *)sectionLabel {
