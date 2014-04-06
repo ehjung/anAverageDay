@@ -23,6 +23,12 @@
     [entry.content addObject:[self formatString:self.titleTextField.text sectionLabel:@"TITLE "]];
     [entry.content addObject:[self formatString:self.moodTextField.text sectionLabel:@"MOOD "]];
     [entry.content addObject:[self formatString:self.weatherTextField.text sectionLabel:@"WEATHER "]];
+    [entry.content addObject:[self formatString:self.locationTextField.text sectionLabel:@"LOCATION "]];
+    [entry.content addObject:[self formatString:self.breakTextField.text sectionLabel:@"BREAKFAST "]];
+    [entry.content addObject:[self formatString:self.lunchTextField.text sectionLabel:@"LUNCH "]];
+    [entry.content addObject:[self formatString:self.dinnerTextField.text sectionLabel:@"DINNER "]];
+    [entry.content addObject:[self formatString:self.snackTextField.text sectionLabel:@"SNACK "]];
+    [entry.content addObject:[self formatString:self.extraTextField.text sectionLabel:@"EXTRA "]];
     
     [self.delegate formViewController:self didAddEntry:entry];
 }
