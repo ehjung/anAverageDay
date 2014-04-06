@@ -21,7 +21,7 @@
             </objects>
             <point key="canvasLocation" x="-1" y="64"/>
         </scene>
-        <!--Form View Controller - Add Entry-->
+        <!--Form View Controller - ADD ENTRY-->
         <scene sceneID="X85-T3-Q1W">
             <objects>
                 <tableViewController id="erO-2g-i7o" customClass="FormViewController" sceneMemberID="viewController">
@@ -229,7 +229,7 @@
                             <outlet property="delegate" destination="erO-2g-i7o" id="k49-2Y-tiP"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Add Entry" id="SPq-PR-UiR">
+                    <navigationItem key="navigationItem" title="ADD ENTRY" id="SPq-PR-UiR">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="d8q-mx-nfA">
                             <connections>
                                 <action selector="cancel:" destination="erO-2g-i7o" id="Xjr-li-I0k"/>
@@ -294,7 +294,7 @@
                             <outlet property="delegate" destination="pGg-6v-bdr" id="Y6K-Cp-Qkv"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="An Average Day" id="tQt-TN-PWz">
+                    <navigationItem key="navigationItem" title="AN AVERAGE DAY" id="tQt-TN-PWz">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="qZb-FL-gDA">
                             <connections>
                                 <segue destination="NrK-Oa-y3C" kind="modal" identifier="form" id="swd-DE-m2F"/>
@@ -306,7 +306,7 @@
             </objects>
             <point key="canvasLocation" x="459" y="64"/>
         </scene>
-        <!--Entry View Controller-->
+        <!--Entry View Controller - AN ENTRY-->
         <scene sceneID="Qrv-Rn-Fey">
             <objects>
                 <tableViewController id="R4O-6r-P9w" customClass="EntryViewController" sceneMemberID="viewController">
@@ -329,7 +329,7 @@
                             <outlet property="delegate" destination="R4O-6r-P9w" id="xrc-fR-fR8"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="JG0-Xx-LRq"/>
+                    <navigationItem key="navigationItem" title="AN ENTRY" id="JG0-Xx-LRq"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4uT-9S-7jQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
