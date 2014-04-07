@@ -23,6 +23,8 @@
 		AC1DF14218EC865800DE7E1A /* anAverageDayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1DF14118EC865800DE7E1A /* anAverageDayTests.m */; };
 		AC1DF14D18EC8C2F00DE7E1A /* FormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1DF14C18EC8C2F00DE7E1A /* FormViewController.m */; };
 		AC1DF15018ECA9D800DE7E1A /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1DF14F18ECA9D800DE7E1A /* Entry.m */; };
+		AC4AAB2818F315B400B14E34 /* customNavBar.m in Sources */ = {isa = PBXBuildFile; fileRef = AC4AAB2718F315B400B14E34 /* customNavBar.m */; };
+		AC4AAB2A18F3328C00B14E34 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC4AAB2918F3328C00B14E34 /* Accelerate.framework */; };
 		AC88C2FE18F1C52900228C60 /* EntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC88C2FD18F1C52900228C60 /* EntryViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -33,6 +35,48 @@
 			proxyType = 1;
 			remoteGlobalIDString = AC1DF10F18EC865800DE7E1A;
 			remoteInfo = anAverageDay;
+		};
+		AC4AABAC18F3334400B14E34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC4AAB8418F3334400B14E34 /* FXBlurViewExample.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 01F3119017CA5C4600C54664;
+			remoteInfo = FXBlurViewExample;
+		};
+		AC4AABAF18F3334400B14E34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC4AAB9518F3334400B14E34 /* FXBlurViewExample.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 01F3119017CA5C4600C54664;
+			remoteInfo = FXBlurViewExample;
+		};
+		AC4AABB218F3334400B14E34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC4AAB3E18F3334400B14E34 /* FXBlurViewExample.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 01F3119017CA5C4600C54664;
+			remoteInfo = FXBlurViewExample;
+		};
+		AC4AABB518F3334400B14E34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC4AABA818F3334400B14E34 /* FXBlurViewExample.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 01F3119017CA5C4600C54664;
+			remoteInfo = FXBlurViewExample;
+		};
+		AC4AABB818F3334400B14E34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC4AAB5318F3334400B14E34 /* FXBlurViewExample.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 01F3119017CA5C4600C54664;
+			remoteInfo = FXBlurViewExample;
+		};
+		AC4AABBB18F3334400B14E34 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AC4AAB6818F3334400B14E34 /* OverlayExample.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 012FDED917D13C23003F0236;
+			remoteInfo = OverlayExample;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -60,6 +104,97 @@
 		AC1DF14C18EC8C2F00DE7E1A /* FormViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FormViewController.m; sourceTree = "<group>"; };
 		AC1DF14E18ECA9D800DE7E1A /* Entry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entry.h; sourceTree = "<group>"; };
 		AC1DF14F18ECA9D800DE7E1A /* Entry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entry.m; sourceTree = "<group>"; };
+		AC4AAB2618F315B400B14E34 /* customNavBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = customNavBar.h; sourceTree = "<group>"; };
+		AC4AAB2718F315B400B14E34 /* customNavBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = customNavBar.m; sourceTree = "<group>"; };
+		AC4AAB2918F3328C00B14E34 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		AC4AAB2F18F3334400B14E34 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AC4AAB3018F3334400B14E34 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AC4AAB3118F3334400B14E34 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		AC4AAB3218F3334400B14E34 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		AC4AAB3318F3334400B14E34 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		AC4AAB3518F3334400B14E34 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AC4AAB3718F3334400B14E34 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		AC4AAB3818F3334400B14E34 /* FXBlurViewExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FXBlurViewExample-Info.plist"; sourceTree = "<group>"; };
+		AC4AAB3918F3334400B14E34 /* FXBlurViewExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FXBlurViewExample-Prefix.pch"; sourceTree = "<group>"; };
+		AC4AAB3A18F3334400B14E34 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AC4AAB3B18F3334400B14E34 /* Snowman.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Snowman.png; sourceTree = "<group>"; };
+		AC4AAB3C18F3334400B14E34 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		AC4AAB3D18F3334400B14E34 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AC4AAB3E18F3334400B14E34 /* FXBlurViewExample.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = FXBlurViewExample.xcodeproj; sourceTree = "<group>"; };
+		AC4AAB4318F3334400B14E34 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AC4AAB4418F3334400B14E34 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AC4AAB4518F3334400B14E34 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		AC4AAB4618F3334400B14E34 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		AC4AAB4718F3334400B14E34 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		AC4AAB4918F3334400B14E34 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AC4AAB4B18F3334400B14E34 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		AC4AAB4C18F3334400B14E34 /* FXBlurViewExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FXBlurViewExample-Info.plist"; sourceTree = "<group>"; };
+		AC4AAB4D18F3334400B14E34 /* FXBlurViewExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FXBlurViewExample-Prefix.pch"; sourceTree = "<group>"; };
+		AC4AAB4E18F3334400B14E34 /* Grass.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Grass.jpg; sourceTree = "<group>"; };
+		AC4AAB4F18F3334400B14E34 /* Grass@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Grass@2x.jpg"; sourceTree = "<group>"; };
+		AC4AAB5018F3334400B14E34 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AC4AAB5118F3334400B14E34 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		AC4AAB5218F3334400B14E34 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AC4AAB5318F3334400B14E34 /* FXBlurViewExample.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = FXBlurViewExample.xcodeproj; sourceTree = "<group>"; };
+		AC4AAB5818F3334400B14E34 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AC4AAB5918F3334400B14E34 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AC4AAB5A18F3334400B14E34 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		AC4AAB5B18F3334400B14E34 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		AC4AAB5C18F3334400B14E34 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		AC4AAB5E18F3334400B14E34 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AC4AAB6018F3334400B14E34 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		AC4AAB6118F3334400B14E34 /* iOS7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = iOS7.jpg; sourceTree = "<group>"; };
+		AC4AAB6218F3334400B14E34 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AC4AAB6318F3334400B14E34 /* overlay.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = overlay.png; sourceTree = "<group>"; };
+		AC4AAB6418F3334400B14E34 /* OverlayExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OverlayExample-Info.plist"; sourceTree = "<group>"; };
+		AC4AAB6518F3334400B14E34 /* OverlayExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "OverlayExample-Prefix.pch"; sourceTree = "<group>"; };
+		AC4AAB6618F3334400B14E34 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		AC4AAB6718F3334400B14E34 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AC4AAB6818F3334400B14E34 /* OverlayExample.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = OverlayExample.xcodeproj; sourceTree = "<group>"; };
+		AC4AAB6C18F3334400B14E34 /* FXBlurView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FXBlurView.h; sourceTree = "<group>"; };
+		AC4AAB6D18F3334400B14E34 /* FXBlurView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FXBlurView.m; sourceTree = "<group>"; };
+		AC4AAB6E18F3334400B14E34 /* FXBlurView.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = FXBlurView.podspec; sourceTree = "<group>"; };
+		AC4AAB6F18F3334400B14E34 /* LICENCE.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = LICENCE.md; sourceTree = "<group>"; };
+		AC4AAB7018F3334400B14E34 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = text; path = README.md; sourceTree = "<group>"; };
+		AC4AAB7418F3334400B14E34 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AC4AAB7518F3334400B14E34 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AC4AAB7618F3334400B14E34 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		AC4AAB7718F3334400B14E34 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		AC4AAB7818F3334400B14E34 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		AC4AAB7A18F3334400B14E34 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AC4AAB7C18F3334400B14E34 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		AC4AAB7D18F3334400B14E34 /* FXBlurViewExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FXBlurViewExample-Info.plist"; sourceTree = "<group>"; };
+		AC4AAB7E18F3334400B14E34 /* FXBlurViewExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FXBlurViewExample-Prefix.pch"; sourceTree = "<group>"; };
+		AC4AAB7F18F3334400B14E34 /* Grass.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Grass.jpg; sourceTree = "<group>"; };
+		AC4AAB8018F3334400B14E34 /* Grass@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Grass@2x.jpg"; sourceTree = "<group>"; };
+		AC4AAB8118F3334400B14E34 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AC4AAB8218F3334400B14E34 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		AC4AAB8318F3334400B14E34 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		AC4AAB8418F3334400B14E34 /* FXBlurViewExample.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = FXBlurViewExample.xcodeproj; sourceTree = "<group>"; };
+		AC4AAB8918F3334400B14E34 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AC4AAB8A18F3334400B14E34 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AC4AAB8B18F3334400B14E34 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		AC4AAB8C18F3334400B14E34 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		AC4AAB8D18F3334400B14E34 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		AC4AAB8F18F3334400B14E34 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AC4AAB9118F3334400B14E34 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		AC4AAB9218F3334400B14E34 /* FXBlurViewExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FXBlurViewExample-Info.plist"; sourceTree = "<group>"; };
+		AC4AAB9318F3334400B14E34 /* FXBlurViewExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FXBlurViewExample-Prefix.pch"; sourceTree = "<group>"; };
+		AC4AAB9418F3334400B14E34 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AC4AAB9518F3334400B14E34 /* FXBlurViewExample.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = FXBlurViewExample.xcodeproj; sourceTree = "<group>"; };
+		AC4AAB9A18F3334400B14E34 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		AC4AAB9B18F3334400B14E34 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		AC4AAB9C18F3334400B14E34 /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		AC4AAB9D18F3334400B14E34 /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		AC4AAB9E18F3334400B14E34 /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		AC4AABA018F3334400B14E34 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		AC4AABA218F3334400B14E34 /* en */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = en; path = en.lproj/ViewController.xib; sourceTree = "<group>"; };
+		AC4AABA318F3334400B14E34 /* FXBlurViewExample-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FXBlurViewExample-Info.plist"; sourceTree = "<group>"; };
+		AC4AABA418F3334400B14E34 /* FXBlurViewExample-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FXBlurViewExample-Prefix.pch"; sourceTree = "<group>"; };
+		AC4AABA518F3334400B14E34 /* Grass.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Grass.jpg; sourceTree = "<group>"; };
+		AC4AABA618F3334400B14E34 /* Grass@2x.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "Grass@2x.jpg"; sourceTree = "<group>"; };
+		AC4AABA718F3334400B14E34 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		AC4AABA818F3334400B14E34 /* FXBlurViewExample.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = FXBlurViewExample.xcodeproj; sourceTree = "<group>"; };
 		AC88C2FC18F1C52900228C60 /* EntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryViewController.h; sourceTree = "<group>"; };
 		AC88C2FD18F1C52900228C60 /* EntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -69,6 +204,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC4AAB2A18F3328C00B14E34 /* Accelerate.framework in Frameworks */,
 				AC1DF11618EC865800DE7E1A /* CoreGraphics.framework in Frameworks */,
 				AC1DF11818EC865800DE7E1A /* UIKit.framework in Frameworks */,
 				AC1DF11418EC865800DE7E1A /* Foundation.framework in Frameworks */,
@@ -110,6 +246,8 @@
 		AC1DF11218EC865800DE7E1A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AC4AAB2B18F3334400B14E34 /* FXBlurView-master */,
+				AC4AAB2918F3328C00B14E34 /* Accelerate.framework */,
 				AC1DF11318EC865800DE7E1A /* Foundation.framework */,
 				AC1DF11518EC865800DE7E1A /* CoreGraphics.framework */,
 				AC1DF11718EC865800DE7E1A /* UIKit.framework */,
@@ -123,6 +261,8 @@
 			children = (
 				AC1DF12218EC865800DE7E1A /* AppDelegate.h */,
 				AC1DF12318EC865800DE7E1A /* AppDelegate.m */,
+				AC4AAB2618F315B400B14E34 /* customNavBar.h */,
+				AC4AAB2718F315B400B14E34 /* customNavBar.m */,
 				AC1DF12518EC865800DE7E1A /* Main.storyboard */,
 				AC1DF12818EC865800DE7E1A /* MasterViewController.h */,
 				AC1DF12918EC865800DE7E1A /* MasterViewController.m */,
@@ -165,6 +305,270 @@
 				AC1DF13E18EC865800DE7E1A /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		AC4AAB2B18F3334400B14E34 /* FXBlurView-master */ = {
+			isa = PBXGroup;
+			children = (
+				AC4AAB2C18F3334400B14E34 /* Examples */,
+				AC4AAB6B18F3334400B14E34 /* FXBlurView */,
+				AC4AAB6E18F3334400B14E34 /* FXBlurView.podspec */,
+				AC4AAB6F18F3334400B14E34 /* LICENCE.md */,
+				AC4AAB7018F3334400B14E34 /* README.md */,
+				AC4AAB7118F3334400B14E34 /* Tests */,
+			);
+			name = "FXBlurView-master";
+			path = "../FXBlurView-master";
+			sourceTree = "<group>";
+		};
+		AC4AAB2C18F3334400B14E34 /* Examples */ = {
+			isa = PBXGroup;
+			children = (
+				AC4AAB2D18F3334400B14E34 /* AnimatedBlurExample */,
+				AC4AAB4118F3334400B14E34 /* BasicExample */,
+				AC4AAB5618F3334400B14E34 /* OverlayExample */,
+			);
+			path = Examples;
+			sourceTree = "<group>";
+		};
+		AC4AAB2D18F3334400B14E34 /* AnimatedBlurExample */ = {
+			isa = PBXGroup;
+			children = (
+				AC4AAB2E18F3334400B14E34 /* FXBlurViewExample */,
+				AC4AAB3E18F3334400B14E34 /* FXBlurViewExample.xcodeproj */,
+			);
+			path = AnimatedBlurExample;
+			sourceTree = "<group>";
+		};
+		AC4AAB2E18F3334400B14E34 /* FXBlurViewExample */ = {
+			isa = PBXGroup;
+			children = (
+				AC4AAB2F18F3334400B14E34 /* AppDelegate.h */,
+				AC4AAB3018F3334400B14E34 /* AppDelegate.m */,
+				AC4AAB3118F3334400B14E34 /* Default-568h@2x.png */,
+				AC4AAB3218F3334400B14E34 /* Default.png */,
+				AC4AAB3318F3334400B14E34 /* Default@2x.png */,
+				AC4AAB3418F3334400B14E34 /* InfoPlist.strings */,
+				AC4AAB3618F3334400B14E34 /* ViewController.xib */,
+				AC4AAB3818F3334400B14E34 /* FXBlurViewExample-Info.plist */,
+				AC4AAB3918F3334400B14E34 /* FXBlurViewExample-Prefix.pch */,
+				AC4AAB3A18F3334400B14E34 /* main.m */,
+				AC4AAB3B18F3334400B14E34 /* Snowman.png */,
+				AC4AAB3C18F3334400B14E34 /* ViewController.h */,
+				AC4AAB3D18F3334400B14E34 /* ViewController.m */,
+			);
+			path = FXBlurViewExample;
+			sourceTree = "<group>";
+		};
+		AC4AAB3F18F3334400B14E34 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC4AABB318F3334400B14E34 /* FXBlurViewExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC4AAB4118F3334400B14E34 /* BasicExample */ = {
+			isa = PBXGroup;
+			children = (
+				AC4AAB4218F3334400B14E34 /* FXBlurViewExample */,
+				AC4AAB5318F3334400B14E34 /* FXBlurViewExample.xcodeproj */,
+			);
+			path = BasicExample;
+			sourceTree = "<group>";
+		};
+		AC4AAB4218F3334400B14E34 /* FXBlurViewExample */ = {
+			isa = PBXGroup;
+			children = (
+				AC4AAB4318F3334400B14E34 /* AppDelegate.h */,
+				AC4AAB4418F3334400B14E34 /* AppDelegate.m */,
+				AC4AAB4518F3334400B14E34 /* Default-568h@2x.png */,
+				AC4AAB4618F3334400B14E34 /* Default.png */,
+				AC4AAB4718F3334400B14E34 /* Default@2x.png */,
+				AC4AAB4818F3334400B14E34 /* InfoPlist.strings */,
+				AC4AAB4A18F3334400B14E34 /* ViewController.xib */,
+				AC4AAB4C18F3334400B14E34 /* FXBlurViewExample-Info.plist */,
+				AC4AAB4D18F3334400B14E34 /* FXBlurViewExample-Prefix.pch */,
+				AC4AAB4E18F3334400B14E34 /* Grass.jpg */,
+				AC4AAB4F18F3334400B14E34 /* Grass@2x.jpg */,
+				AC4AAB5018F3334400B14E34 /* main.m */,
+				AC4AAB5118F3334400B14E34 /* ViewController.h */,
+				AC4AAB5218F3334400B14E34 /* ViewController.m */,
+			);
+			path = FXBlurViewExample;
+			sourceTree = "<group>";
+		};
+		AC4AAB5418F3334400B14E34 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC4AABB918F3334400B14E34 /* FXBlurViewExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC4AAB5618F3334400B14E34 /* OverlayExample */ = {
+			isa = PBXGroup;
+			children = (
+				AC4AAB5718F3334400B14E34 /* OverlayExample */,
+				AC4AAB6818F3334400B14E34 /* OverlayExample.xcodeproj */,
+			);
+			path = OverlayExample;
+			sourceTree = "<group>";
+		};
+		AC4AAB5718F3334400B14E34 /* OverlayExample */ = {
+			isa = PBXGroup;
+			children = (
+				AC4AAB5818F3334400B14E34 /* AppDelegate.h */,
+				AC4AAB5918F3334400B14E34 /* AppDelegate.m */,
+				AC4AAB5A18F3334400B14E34 /* Default-568h@2x.png */,
+				AC4AAB5B18F3334400B14E34 /* Default.png */,
+				AC4AAB5C18F3334400B14E34 /* Default@2x.png */,
+				AC4AAB5D18F3334400B14E34 /* InfoPlist.strings */,
+				AC4AAB5F18F3334400B14E34 /* ViewController.xib */,
+				AC4AAB6118F3334400B14E34 /* iOS7.jpg */,
+				AC4AAB6218F3334400B14E34 /* main.m */,
+				AC4AAB6318F3334400B14E34 /* overlay.png */,
+				AC4AAB6418F3334400B14E34 /* OverlayExample-Info.plist */,
+				AC4AAB6518F3334400B14E34 /* OverlayExample-Prefix.pch */,
+				AC4AAB6618F3334400B14E34 /* ViewController.h */,
+				AC4AAB6718F3334400B14E34 /* ViewController.m */,
+			);
+			path = OverlayExample;
+			sourceTree = "<group>";
+		};
+		AC4AAB6918F3334400B14E34 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC4AABBC18F3334400B14E34 /* OverlayExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC4AAB6B18F3334400B14E34 /* FXBlurView */ = {
+			isa = PBXGroup;
+			children = (
+				AC4AAB6C18F3334400B14E34 /* FXBlurView.h */,
+				AC4AAB6D18F3334400B14E34 /* FXBlurView.m */,
+			);
+			path = FXBlurView;
+			sourceTree = "<group>";
+		};
+		AC4AAB7118F3334400B14E34 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				AC4AAB7218F3334400B14E34 /* AnimationTest */,
+				AC4AAB8718F3334400B14E34 /* EdgeTest */,
+				AC4AAB9818F3334400B14E34 /* MultiViewTest */,
+			);
+			path = Tests;
+			sourceTree = "<group>";
+		};
+		AC4AAB7218F3334400B14E34 /* AnimationTest */ = {
+			isa = PBXGroup;
+			children = (
+				AC4AAB7318F3334400B14E34 /* FXBlurViewExample */,
+				AC4AAB8418F3334400B14E34 /* FXBlurViewExample.xcodeproj */,
+			);
+			path = AnimationTest;
+			sourceTree = "<group>";
+		};
+		AC4AAB7318F3334400B14E34 /* FXBlurViewExample */ = {
+			isa = PBXGroup;
+			children = (
+				AC4AAB7418F3334400B14E34 /* AppDelegate.h */,
+				AC4AAB7518F3334400B14E34 /* AppDelegate.m */,
+				AC4AAB7618F3334400B14E34 /* Default-568h@2x.png */,
+				AC4AAB7718F3334400B14E34 /* Default.png */,
+				AC4AAB7818F3334400B14E34 /* Default@2x.png */,
+				AC4AAB7918F3334400B14E34 /* InfoPlist.strings */,
+				AC4AAB7B18F3334400B14E34 /* ViewController.xib */,
+				AC4AAB7D18F3334400B14E34 /* FXBlurViewExample-Info.plist */,
+				AC4AAB7E18F3334400B14E34 /* FXBlurViewExample-Prefix.pch */,
+				AC4AAB7F18F3334400B14E34 /* Grass.jpg */,
+				AC4AAB8018F3334400B14E34 /* Grass@2x.jpg */,
+				AC4AAB8118F3334400B14E34 /* main.m */,
+				AC4AAB8218F3334400B14E34 /* ViewController.h */,
+				AC4AAB8318F3334400B14E34 /* ViewController.m */,
+			);
+			path = FXBlurViewExample;
+			sourceTree = "<group>";
+		};
+		AC4AAB8518F3334400B14E34 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC4AABAD18F3334400B14E34 /* FXBlurViewExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC4AAB8718F3334400B14E34 /* EdgeTest */ = {
+			isa = PBXGroup;
+			children = (
+				AC4AAB8818F3334400B14E34 /* FXBlurViewExample */,
+				AC4AAB9518F3334400B14E34 /* FXBlurViewExample.xcodeproj */,
+			);
+			path = EdgeTest;
+			sourceTree = "<group>";
+		};
+		AC4AAB8818F3334400B14E34 /* FXBlurViewExample */ = {
+			isa = PBXGroup;
+			children = (
+				AC4AAB8918F3334400B14E34 /* AppDelegate.h */,
+				AC4AAB8A18F3334400B14E34 /* AppDelegate.m */,
+				AC4AAB8B18F3334400B14E34 /* Default-568h@2x.png */,
+				AC4AAB8C18F3334400B14E34 /* Default.png */,
+				AC4AAB8D18F3334400B14E34 /* Default@2x.png */,
+				AC4AAB8E18F3334400B14E34 /* InfoPlist.strings */,
+				AC4AAB9018F3334400B14E34 /* ViewController.xib */,
+				AC4AAB9218F3334400B14E34 /* FXBlurViewExample-Info.plist */,
+				AC4AAB9318F3334400B14E34 /* FXBlurViewExample-Prefix.pch */,
+				AC4AAB9418F3334400B14E34 /* main.m */,
+			);
+			path = FXBlurViewExample;
+			sourceTree = "<group>";
+		};
+		AC4AAB9618F3334400B14E34 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC4AABB018F3334400B14E34 /* FXBlurViewExample.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AC4AAB9818F3334400B14E34 /* MultiViewTest */ = {
+			isa = PBXGroup;
+			children = (
+				AC4AAB9918F3334400B14E34 /* FXBlurViewExample */,
+				AC4AABA818F3334400B14E34 /* FXBlurViewExample.xcodeproj */,
+			);
+			path = MultiViewTest;
+			sourceTree = "<group>";
+		};
+		AC4AAB9918F3334400B14E34 /* FXBlurViewExample */ = {
+			isa = PBXGroup;
+			children = (
+				AC4AAB9A18F3334400B14E34 /* AppDelegate.h */,
+				AC4AAB9B18F3334400B14E34 /* AppDelegate.m */,
+				AC4AAB9C18F3334400B14E34 /* Default-568h@2x.png */,
+				AC4AAB9D18F3334400B14E34 /* Default.png */,
+				AC4AAB9E18F3334400B14E34 /* Default@2x.png */,
+				AC4AAB9F18F3334400B14E34 /* InfoPlist.strings */,
+				AC4AABA118F3334400B14E34 /* ViewController.xib */,
+				AC4AABA318F3334400B14E34 /* FXBlurViewExample-Info.plist */,
+				AC4AABA418F3334400B14E34 /* FXBlurViewExample-Prefix.pch */,
+				AC4AABA518F3334400B14E34 /* Grass.jpg */,
+				AC4AABA618F3334400B14E34 /* Grass@2x.jpg */,
+				AC4AABA718F3334400B14E34 /* main.m */,
+			);
+			path = FXBlurViewExample;
+			sourceTree = "<group>";
+		};
+		AC4AABA918F3334400B14E34 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AC4AABB618F3334400B14E34 /* FXBlurViewExample.app */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -230,6 +634,32 @@
 			mainGroup = AC1DF10718EC865800DE7E1A;
 			productRefGroup = AC1DF11118EC865800DE7E1A /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = AC4AAB8518F3334400B14E34 /* Products */;
+					ProjectRef = AC4AAB8418F3334400B14E34 /* FXBlurViewExample.xcodeproj */;
+				},
+				{
+					ProductGroup = AC4AAB9618F3334400B14E34 /* Products */;
+					ProjectRef = AC4AAB9518F3334400B14E34 /* FXBlurViewExample.xcodeproj */;
+				},
+				{
+					ProductGroup = AC4AAB3F18F3334400B14E34 /* Products */;
+					ProjectRef = AC4AAB3E18F3334400B14E34 /* FXBlurViewExample.xcodeproj */;
+				},
+				{
+					ProductGroup = AC4AABA918F3334400B14E34 /* Products */;
+					ProjectRef = AC4AABA818F3334400B14E34 /* FXBlurViewExample.xcodeproj */;
+				},
+				{
+					ProductGroup = AC4AAB5418F3334400B14E34 /* Products */;
+					ProjectRef = AC4AAB5318F3334400B14E34 /* FXBlurViewExample.xcodeproj */;
+				},
+				{
+					ProductGroup = AC4AAB6918F3334400B14E34 /* Products */;
+					ProjectRef = AC4AAB6818F3334400B14E34 /* OverlayExample.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				AC1DF10F18EC865800DE7E1A /* anAverageDay */,
@@ -237,6 +667,51 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		AC4AABAD18F3334400B14E34 /* FXBlurViewExample.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = FXBlurViewExample.app;
+			remoteRef = AC4AABAC18F3334400B14E34 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AC4AABB018F3334400B14E34 /* FXBlurViewExample.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = FXBlurViewExample.app;
+			remoteRef = AC4AABAF18F3334400B14E34 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AC4AABB318F3334400B14E34 /* FXBlurViewExample.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = FXBlurViewExample.app;
+			remoteRef = AC4AABB218F3334400B14E34 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AC4AABB618F3334400B14E34 /* FXBlurViewExample.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = FXBlurViewExample.app;
+			remoteRef = AC4AABB518F3334400B14E34 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AC4AABB918F3334400B14E34 /* FXBlurViewExample.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = FXBlurViewExample.app;
+			remoteRef = AC4AABB818F3334400B14E34 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		AC4AABBC18F3334400B14E34 /* OverlayExample.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = OverlayExample.app;
+			remoteRef = AC4AABBB18F3334400B14E34 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		AC1DF10E18EC865800DE7E1A /* Resources */ = {
@@ -270,6 +745,7 @@
 				AC1DF12A18EC865800DE7E1A /* MasterViewController.m in Sources */,
 				AC1DF12018EC865800DE7E1A /* main.m in Sources */,
 				AC1DF14D18EC8C2F00DE7E1A /* FormViewController.m in Sources */,
+				AC4AAB2818F315B400B14E34 /* customNavBar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +790,102 @@
 				AC1DF13F18EC865800DE7E1A /* en */,
 			);
 			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		AC4AAB3418F3334400B14E34 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC4AAB3518F3334400B14E34 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		AC4AAB3618F3334400B14E34 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC4AAB3718F3334400B14E34 /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+		AC4AAB4818F3334400B14E34 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC4AAB4918F3334400B14E34 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		AC4AAB4A18F3334400B14E34 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC4AAB4B18F3334400B14E34 /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+		AC4AAB5D18F3334400B14E34 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC4AAB5E18F3334400B14E34 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		AC4AAB5F18F3334400B14E34 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC4AAB6018F3334400B14E34 /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+		AC4AAB7918F3334400B14E34 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC4AAB7A18F3334400B14E34 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		AC4AAB7B18F3334400B14E34 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC4AAB7C18F3334400B14E34 /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+		AC4AAB8E18F3334400B14E34 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC4AAB8F18F3334400B14E34 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		AC4AAB9018F3334400B14E34 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC4AAB9118F3334400B14E34 /* en */,
+			);
+			name = ViewController.xib;
+			sourceTree = "<group>";
+		};
+		AC4AAB9F18F3334400B14E34 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC4AABA018F3334400B14E34 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		AC4AABA118F3334400B14E34 /* ViewController.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AC4AABA218F3334400B14E34 /* en */,
+			);
+			name = ViewController.xib;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

@@ -35,7 +35,6 @@
     [super viewDidLoad];
 	// Do any additional setup after loading the view, typically from a nib.
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
-
 }
 
 - (void)didReceiveMemoryWarning
@@ -73,6 +72,9 @@
     Entry *entry = self.appDelegate.entries[indexPath.row];
     cell.textLabel.text = entry.title;
     cell.imageView.image = [UIImage imageNamed:@"images.png"];
+    
+//    UIToolbar* bgToolbar = [[UIToolbar alloc] initWithFrame:cell.frame];
+//    [cell.superview addSubview:bgToolbar];
     
     return cell;
 }
