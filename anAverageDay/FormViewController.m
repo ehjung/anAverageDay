@@ -64,6 +64,28 @@
     }
 }
 
+- (void)viewWillAppear:(BOOL)animated {
+    [self.tableView setBackgroundColor:[UIColor colorWithRed:205.0/255.0 green:201.0/255.0 blue:201.0/255.0 alpha:1.0]];
+    
+    self.headers = [NSMutableArray arrayWithObjects:@"  TITLE", @"  MOOD", @"  WEATHER", @"  LOCATION", @"  FOOD CONSUMED", @"  EXTRA MUNDANE STUFF", nil];
+}
+
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    CGRect frame = CGRectMake(0, 0, self.view.bounds.size.width, 20.0);
+    UIView *view = [[UIView alloc] initWithFrame:frame];
+    UILabel *header = [[UILabel alloc] initWithFrame:frame];
+    
+    NSDictionary *textFormat = @{ NSFontAttributeName:[UIFont fontWithName:@"Helvetica Neue" size:12.0], NSForegroundColorAttributeName:[UIColor whiteColor]};
+    header.attributedText = [[NSMutableAttributedString alloc] initWithString:[self.headers objectAtIndex:section] attributes:textFormat];
+    
+    [view addSubview:header];
+    return view;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 20;
+}
+
 - (void)tableView:(UITableView *)tableView
 didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {

@@ -22,6 +22,7 @@
 
 @property (nonatomic, weak) id <FormViewControllerDelegate> delegate;
 @property (nonatomic, strong) Entry *entry;
+@property (nonatomic, strong) NSMutableArray *headers;
 
 @property (strong, nonatomic) IBOutlet UITextField *titleTextField;
 @property (strong, nonatomic) IBOutlet UITextField *breakTextField;
