@@ -72,6 +72,8 @@
 
     Entry *entry = self.appDelegate.entries[indexPath.row];
     cell.textLabel.text = entry.title;
+    cell.imageView.image = [UIImage imageNamed:@"images.png"];
+    
     return cell;
 }
 
