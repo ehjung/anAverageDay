@@ -16,10 +16,11 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
-    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:139.0/255.0 green:131.0/255.0 blue:120.0/255.0 alpha:1.0]];
-    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
-    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor], NSFontAttributeName:[UIFont fontWithName:@"Thonburi" size:14.0]}];
+    [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleDefault];
+//    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:139.0/255.0 green:131.0/255.0 blue:120.0/255.0 alpha:1.0]];
+//    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+ //   [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor], NSFontAttributeName:[UIFont fontWithName:@"Thonburi" size:14.0]}];
+    
     return YES;
 }
 							

@@ -17,10 +17,11 @@
 }
 - (IBAction)save:(id)sender {
     self.entry = [[Entry alloc] init];
-    [self setEntryTitle:self.entry];
+    //[self setEntryTitle:self.entry];
     
     self.entry.title = self.titleTextField.text;
     [self addObject:self.titleTextField.text sectionLabel:@"TITLE "];
+    [self addObject:[self getDate] sectionLabel:@"DATE "];
     [self addObject:self.moodTextField.text sectionLabel:@"MOOD "];
     [self addObject:self.weatherTextField.text sectionLabel:@"WEATHER "];
     [self addObject:self.locationTextField.text sectionLabel:@"LOCATION "];
@@ -55,13 +56,11 @@
     }
 }
 
-- (void)setEntryTitle:(Entry *)entry {
-    if( 0 == entry.title.length ) {
-        NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-        [dateFormatter setDateFormat:@"MMM-dd-yyyy HH:mm:ss a"];
-        NSMutableAttributedString *date = [[NSMutableAttributedString alloc] initWithString:[dateFormatter stringFromDate:[NSDate date]]];
-        entry.title = date;
-    }
+- (NSString *)getDate {
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"MMM-dd-yyyy HH:mm:ss a"];
+    NSString *date = [dateFormatter stringFromDate:[NSDate date]];
+    return date;
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -93,5 +92,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 		[self.titleTextField becomeFirstResponder];
     }
 }
+
+
 
 @end
