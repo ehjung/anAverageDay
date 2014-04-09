@@ -9,7 +9,6 @@
 #import "MasterViewController.h"
 #import "Entry.h"
 #import "EntryViewController.h"
-#import "FXBlurView.h"
 
 @interface MasterViewController () {
     NSMutableArray *_objects;
@@ -29,29 +28,6 @@
 - (void)awakeFromNib
 {
     [super awakeFromNib];
-}
-
-- (void)viewWillAppear:(BOOL)animated {
-    //[self.navigationController.navigationBar setBackgroundImage:[UIImage new] forBarMetrics:UIBarMetricsDefault];
-/*
-    CALayer *colourLayer = [CALayer layer];
-    colourLayer.backgroundColor = [UIColor colorWithRed: 130.0/255.0 green: 0.0 blue: 13.0/255.0 alpha: 1.0].CGColor;
-    colourLayer.opacity = 0.2f;
-    colourLayer.frame = CGRectMake(0, 0, self.navigationController.navigationBar.frame.size.width, self.navigationController.navigationBar.frame.size.height);
- */
-    
-    [self.navigationController.navigationBar setBackgroundImage:[UIImage imageNamed:@"red2.png"] forBarMetrics:UIBarMetricsDefault];
-
-    FXBlurView *blurView = [[FXBlurView alloc] initWithFrame:CGRectMake(0, 0, self.navigationController.navigationBar.frame.size.width, self.navigationController.navigationBar.frame.size.height + 20)];
-    blurView.underlyingView = self.tableView;
-    blurView.tintColor = [UIColor clearColor];
-    blurView.updateInterval = 0.01;
-    [blurView setDynamic:YES];
-    blurView.blurRadius = 10;
-    blurView.alpha = 1.0f;
-    
-    [self.navigationController.navigationBar.superview insertSubview:blurView belowSubview:self.navigationController.navigationBar];
-    //[self.navigationController.navigationBar.layer addSublayer:colourLayer];
 }
 
 - (void)viewDidLoad
@@ -96,9 +72,6 @@
     Entry *entry = self.appDelegate.entries[indexPath.row];
     cell.textLabel.text = entry.title;
     cell.imageView.image = [UIImage imageNamed:@"images.png"];
-    
-//    UIToolbar* bgToolbar = [[UIToolbar alloc] initWithFrame:cell.frame];
-//    [cell.superview addSubview:bgToolbar];
     
     return cell;
 }

@@ -16,11 +16,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-//    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:139.0/255.0 green:131.0/255.0 blue:120.0/255.0 alpha:1.0]];
-//    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
-//[[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor], NSFontAttributeName:[UIFont fontWithName:@"Thonburi" size:14.0]}];
-    //      [blurView setDynamic:YES];
-    //        [self addSubview:blurView];
+    [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:61.0/255.0 green:89.0/255.0 blue:171.0/255.0 alpha:1.0]];
+[[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor colorWithRed:61.0/255.0 green:89.0/255.0 blue:171.0/255.0 alpha:1.0], NSFontAttributeName:[UIFont fontWithName:@"Futura-CondensedExtraBold" size:20.0]}];
     return YES;
 }
 							
