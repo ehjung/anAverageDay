@@ -34,6 +34,9 @@
 @property (strong, nonatomic) IBOutlet UITextField *locationTextField;
 @property (strong, nonatomic) IBOutlet UITextField *extraTextField;
 
+@property (strong, nonatomic) IBOutlet UIButton *takePhotoButton;
+@property (strong, nonatomic) IBOutlet UIView *buttonView;
+
 - (IBAction)cancel:(id)sender;
 - (IBAction)save:(id)sender;
 

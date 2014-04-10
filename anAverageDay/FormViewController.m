@@ -67,6 +67,11 @@
     [self.tableView setBackgroundColor:[UIColor colorWithRed:205.0/255.0 green:201.0/255.0 blue:201.0/255.0 alpha:1.0]];
     
     self.headers = [NSMutableArray arrayWithObjects:@"  TITLE", @"  MOOD", @"  WEATHER", @"  LOCATION", @"  FOOD CONSUMED", @"  EXTRA MUNDANE STUFF", nil];
+    
+    self.takePhotoButton.layer.cornerRadius = 5;
+    self.takePhotoButton.layer.borderWidth = 1;
+    self.takePhotoButton.layer.borderColor = [UIColor colorWithRed:61.0/255.0 green:89.0/255.0 blue:171.0/255.0 alpha:1.0].CGColor;
+    [self.takePhotoButton setTitleColor:[UIColor colorWithRed:61.0/255.0 green:89.0/255.0 blue:171.0/255.0 alpha:1.0] forState:UIControlStateNormal];
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
