@@ -297,16 +297,56 @@
                     <view key="view" contentMode="scaleToFill" id="4Lj-Mz-upb">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JJo-rb-uwa">
+                                <rect key="frame" x="122" y="435" width="77" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Take Photo">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="captureNow" destination="Qi7-WY-Teu" eventType="touchDown" id="wi4-d3-xik"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="I4W-ai-bBY" customClass="imagePreview">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="eJV-ht-dql"/>
                     <connections>
+                        <outlet property="cameraButton" destination="JJo-rb-uwa" id="xoN-U7-jRP"/>
                         <outlet property="imagePreview" destination="4Lj-Mz-upb" id="Vv3-gj-1qK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xaM-nq-CPX" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1502" y="84"/>
+            <point key="canvasLocation" x="902" y="1526"/>
+        </scene>
+        <!--Camera View Controller-->
+        <scene sceneID="e8w-BB-oix">
+            <objects>
+                <viewController id="643-3k-oKG" customClass="CameraViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dq3-zo-kNh"/>
+                        <viewControllerLayoutGuide type="bottom" id="X7W-tI-qM9"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="rwu-PE-qbD">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="j82-on-Rkd"/>
+                    <connections>
+                        <outlet property="image" destination="I4W-ai-bBY" id="Hll-F9-Kgx"/>
+                        <outlet property="imageView" destination="I4W-ai-bBY" id="8oE-2n-Irh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kh2-4R-23H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1502" y="1526"/>
         </scene>
         <!--Master View Controller - Master-->
         <scene sceneID="VgW-fR-Quf">

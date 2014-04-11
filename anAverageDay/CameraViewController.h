@@ -14,7 +14,10 @@
 @property (nonatomic, strong) AVCaptureDevice *device;
 @property (nonatomic, strong) AVCaptureSession *session;
 @property (nonatomic, strong) AVCaptureVideoPreviewLayer *videoLayer;
+@property (nonatomic, retain) AVCaptureStillImageOutput *stillImageOutput;
 
-@property(nonatomic, retain) IBOutlet UIView *imagePreview;
+@property (nonatomic, retain) IBOutlet UIView *imagePreview;
+@property (nonatomic, retain) IBOutlet UIImageView *imageView;
+@property (strong, nonatomic) IBOutlet UIButton *cameraButton;
 
 @end

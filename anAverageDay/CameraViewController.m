@@ -50,6 +50,39 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (IBAction)captureNow {
+    AVCaptureConnection *videoConnection = nil;
+    for (AVCaptureConnection *connection in self.stillImageOutput.connections)
+	{
+		for (AVCaptureInputPort *port in [connection inputPorts])
+		{
+			if ([[port mediaType] isEqual:AVMediaTypeVideo] )
+			{
+				videoConnection = connection;
+				break;
+			}
+		}
+		if (videoConnection) { break; }
+	}
+	
+	[self.stillImageOutput captureStillImageAsynchronouslyFromConnection:videoConnection completionHandler: ^(CMSampleBufferRef imageSampleBuffer, NSError *error)
+     {
+/*		 CFDictionaryRef exifAttachments = CMGetAttachment( imageSampleBuffer, kCGImagePropertyExifDictionary, NULL);
+		 if (exifAttachments)
+		 {
+             // Do something with the attachments.
+  //           NSLog(@"attachements: %@", exifAttachments);
+		 }
+         else
+             NSLog(@"no attachments");
+  */
+         NSData *imageData = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageSampleBuffer];
+         UIImage *image = [[UIImage alloc] initWithData:imageData];
+         
+         self.imageView.image = image;
+	 }];
+}
+
 /*
 #pragma mark - Navigation
 
