@@ -14,19 +14,33 @@
 
 @implementation CameraViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    if (self = [super initWithCoder:aDecoder]) {
+        self.session = [[AVCaptureSession alloc] init];
     }
     return self;
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    self.session.sessionPreset = AVCaptureSessionPresetMedium;
+    self.videoLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:self.session];
+    self.videoLayer.frame = self.imagePreview.bounds;
+    [self.imagePreview.layer addSublayer:self.videoLayer];
+    
+    self.device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
+	
+	NSError *error = nil;
+	AVCaptureDeviceInput *input = [AVCaptureDeviceInput deviceInputWithDevice:self.device error:&error];
+	if (!input) {
+		NSLog(@"ERROR: trying to open camera: %@", error);
+	}
+	[self.session addInput:input];
+    [self.session startRunning];
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.label = @"TESTING";
     // Do any additional setup after loading the view.
 }
 
