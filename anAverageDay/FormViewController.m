@@ -98,7 +98,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     
-    self.headers = [NSMutableArray arrayWithObjects:@"  TITLE", @"  MOOD", @"  WEATHER", @"  LOCATION", @"  FOOD CONSUMED", @"  EXTRA MUNDANE STUFF", nil];
+    self.headers = [NSMutableArray arrayWithObjects:@"  MUNDANE ENTRY", nil];
     
     self.takePhotoButton.layer.cornerRadius = 5;
     self.takePhotoButton.layer.borderWidth = 1;
@@ -108,19 +108,16 @@
 
 - (void)viewDidLoad {
     [self.tableView setBackgroundColor:[UIColor colorWithRed:205.0/255.0 green:201.0/255.0 blue:201.0/255.0 alpha:1.0]];
-    [self formatLabel:self.titleLabel text:@"TITLE"];
-    [self formatLabel:self.moodLabel text:@"MOOD"];
-    [self formatLabel:self.weatherLabel text:@"WEATHER"];
-    [self formatLabel:self.locationLabel text:@"LOCATION"];
-    [self formatLabel:self.foodLabel text:@"FOOD CONSUMED"];
-    [self formatLabel:self.tasksLabel text:@"TASKS COMPLETED"];
-    [self formatLabel:self.extraLabel text:@"EXTRA MUNDANE STUFF"];
-    
-    [self.titleTextField setBackgroundColor:[UIColor grayColor]];
+    [self formatLabel:self.titleLabel];
+    [self formatLabel:self.moodLabel];
+    [self formatLabel:self.weatherLabel];
+    [self formatLabel:self.locationLabel];
+    [self formatLabel:self.foodLabel];
+    [self formatLabel:self.tasksLabel];
+    [self formatLabel:self.extraLabel];
 }
 
-- (void)formatLabel:(UILabel *)label text:(NSString *)text {
-    label.text = text;
+- (void)formatLabel:(UILabel *)label {
     [label setFont:[UIFont fontWithName:@"Helvetica Light" size:12.0]];
     [label.text uppercaseString];
 }
@@ -145,7 +142,7 @@
     if (indexPath.row == 4 || indexPath.row == 5) {
         return 100;
     } else {
-        return 100;
+        return 70;
     }
 }
 
