@@ -23,16 +23,23 @@
 @property (nonatomic, weak) id <FormViewControllerDelegate> delegate;
 @property (nonatomic, strong) Entry *entry;
 @property (nonatomic, strong) NSMutableArray *headers;
+@property (nonatomic) CGFloat initialHeight;
 
 @property (strong, nonatomic) IBOutlet UITextField *titleTextField;
-@property (strong, nonatomic) IBOutlet UITextField *breakTextField;
-@property (strong, nonatomic) IBOutlet UITextField *lunchTextField;
-@property (strong, nonatomic) IBOutlet UITextField *dinnerTextField;
-@property (strong, nonatomic) IBOutlet UITextField *snackTextField;
 @property (strong, nonatomic) IBOutlet UITextField *moodTextField;
 @property (strong, nonatomic) IBOutlet UITextField *weatherTextField;
 @property (strong, nonatomic) IBOutlet UITextField *locationTextField;
+@property (strong, nonatomic) IBOutlet UITextField *foodTextField;
+@property (strong, nonatomic) IBOutlet UITextField *tasksTextField;
 @property (strong, nonatomic) IBOutlet UITextField *extraTextField;
+
+@property (strong, nonatomic) IBOutlet UILabel *titleLabel;
+@property (strong, nonatomic) IBOutlet UILabel *moodLabel;
+@property (strong, nonatomic) IBOutlet UILabel *weatherLabel;
+@property (strong, nonatomic) IBOutlet UILabel *locationLabel;
+@property (strong, nonatomic) IBOutlet UILabel *foodLabel;
+@property (strong, nonatomic) IBOutlet UILabel *tasksLabel;
+@property (strong, nonatomic) IBOutlet UILabel *extraLabel;
 
 @property (strong, nonatomic) IBOutlet UIButton *takePhotoButton;
 @property (strong, nonatomic) IBOutlet UIView *buttonView;
