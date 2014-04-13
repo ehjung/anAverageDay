@@ -108,18 +108,10 @@
 
 - (void)viewDidLoad {
     [self.tableView setBackgroundColor:[UIColor colorWithRed:205.0/255.0 green:201.0/255.0 blue:201.0/255.0 alpha:1.0]];
-    [self formatLabel:self.titleLabel];
-    [self formatLabel:self.moodLabel];
-    [self formatLabel:self.weatherLabel];
-    [self formatLabel:self.locationLabel];
-    [self formatLabel:self.foodLabel];
-    [self formatLabel:self.tasksLabel];
-    [self formatLabel:self.extraLabel];
 }
 
 - (void)formatLabel:(UILabel *)label {
     [label setFont:[UIFont fontWithName:@"Helvetica Light" size:12.0]];
-    [label.text uppercaseString];
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
