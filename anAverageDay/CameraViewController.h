@@ -19,12 +19,12 @@
 @property (nonatomic, retain) UIImage *stillImage;
 
 @property (nonatomic, retain) IBOutlet UIView *imagePreview;
+@property (strong, nonatomic) IBOutlet UIButton *cameraButton;
+- (IBAction)captureNow;
 
 /*
 @property (nonatomic, retain) IBOutlet UIImageView *imageView;
-@property (strong, nonatomic) IBOutlet UIButton *cameraButton;
 
-- (IBAction)captureNow;
  */
 
 @end
