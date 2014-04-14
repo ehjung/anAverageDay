@@ -61,8 +61,9 @@
     [self addObject:self.moodTextField.text sectionLabel:@"MOOD "];
     [self addObject:self.weatherTextField.text sectionLabel:@"WEATHER "];
     [self addObject:self.locationTextField.text sectionLabel:@"LOCATION "];
-    [self addObject:self.foodTextField.text sectionLabel:@"FOOD "];
-    [self addObject:self.extraTextField.text sectionLabel:@"EXTRA "];
+    [self addObject:self.foodTextView.text sectionLabel:@"FOOD CONSUMED "];
+    [self addObject:self.tasksTextView.text sectionLabel:@"TASKS COMPLETED"];
+    [self addObject:self.extraTextView.text sectionLabel:@"EXTRA "];
     
     [self.delegate formViewController:self didAddEntry:self.entry];
 }
@@ -131,7 +132,7 @@
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (indexPath.row == 4 || indexPath.row == 5) {
+    if (indexPath.row >= 4) {
         return 100;
     } else {
         return 70;

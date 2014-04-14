@@ -29,9 +29,9 @@
 @property (strong, nonatomic) IBOutlet UITextField *moodTextField;
 @property (strong, nonatomic) IBOutlet UITextField *weatherTextField;
 @property (strong, nonatomic) IBOutlet UITextField *locationTextField;
-@property (strong, nonatomic) IBOutlet UITextField *foodTextField;
-@property (strong, nonatomic) IBOutlet UITextField *tasksTextField;
-@property (strong, nonatomic) IBOutlet UITextField *extraTextField;
+@property (strong, nonatomic) IBOutlet UITextView *foodTextView;
+@property (strong, nonatomic) IBOutlet UITextView *tasksTextView;
+@property (strong, nonatomic) IBOutlet UITextView *extraTextView;
 
 @property (strong, nonatomic) IBOutlet UILabel *titleLabel;
 @property (strong, nonatomic) IBOutlet UILabel *moodLabel;

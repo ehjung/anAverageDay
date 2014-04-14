@@ -163,49 +163,51 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="67" id="2Fz-EX-55N">
-                                        <rect key="frame" x="0.0" y="552" width="320" height="67"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="121" id="z6S-w5-ySg">
+                                        <rect key="frame" x="0.0" y="552" width="320" height="121"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2Fz-EX-55N" id="9Ml-0X-baw">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="z6S-w5-ySg" id="rfZ-J4-OER">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TASKS COMPLETED" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AuA-mT-7Rp">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="TASKS COMPLETED" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="55c-dU-xop">
                                                     <rect key="frame" x="20" y="6" width="280" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="10"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yCk-1A-I1z">
-                                                    <rect key="frame" x="20" y="25" width="280" height="30"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Doe-NG-U1P">
+                                                    <rect key="frame" x="20" y="25" width="280" height="75"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="67" id="STr-zd-T5t">
-                                        <rect key="frame" x="0.0" y="619" width="320" height="67"/>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="121" id="vJQ-PR-e9J">
+                                        <rect key="frame" x="0.0" y="673" width="320" height="121"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="STr-zd-T5t" id="AgJ-mi-aoX">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="66"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vJQ-PR-e9J" id="S2D-ad-VEK">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="120"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="EXTRA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="39Q-0Y-URN">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="EXTRA" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5Zp-Ck-H28">
                                                     <rect key="frame" x="20" y="6" width="280" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="10"/>
                                                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Kiy-6H-5m0">
-                                                    <rect key="frame" x="20" y="25" width="280" height="30"/>
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VlA-fv-Nsj">
+                                                    <rect key="frame" x="20" y="25" width="280" height="75"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                                </textView>
                                             </subviews>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -231,16 +233,17 @@
                     </navigationItem>
                     <connections>
                         <outlet property="buttonView" destination="oux-Pm-T0F" id="IA1-he-OVj"/>
-                        <outlet property="extraLabel" destination="39Q-0Y-URN" id="S2O-gh-u81"/>
-                        <outlet property="extraTextField" destination="Kiy-6H-5m0" id="GVb-lR-hP6"/>
+                        <outlet property="extraLabel" destination="5Zp-Ck-H28" id="mv3-nj-4QZ"/>
+                        <outlet property="extraTextView" destination="VlA-fv-Nsj" id="S2m-Na-PXZ"/>
                         <outlet property="foodLabel" destination="cda-S7-GBd" id="ULW-rL-zlt"/>
+                        <outlet property="foodTextView" destination="Ie1-0z-jNn" id="pCz-KV-i7D"/>
                         <outlet property="locationLabel" destination="OKE-lP-Ifs" id="XCp-M4-tLF"/>
                         <outlet property="locationTextField" destination="KmJ-Vg-mEp" id="45G-Sa-gTh"/>
                         <outlet property="moodLabel" destination="Vuc-8x-rzF" id="WGR-f2-aDk"/>
                         <outlet property="moodTextField" destination="bxi-k4-lt7" id="dtz-pD-Ktp"/>
                         <outlet property="takePhotoButton" destination="Ssv-Xn-pDZ" id="s4V-7y-DFZ"/>
-                        <outlet property="tasksLabel" destination="AuA-mT-7Rp" id="KMg-nR-pLi"/>
-                        <outlet property="tasksTextField" destination="yCk-1A-I1z" id="1Z6-8e-dzr"/>
+                        <outlet property="tasksLabel" destination="55c-dU-xop" id="G1v-rm-s6R"/>
+                        <outlet property="tasksTextView" destination="Doe-NG-U1P" id="ekO-54-VgI"/>
                         <outlet property="titleLabel" destination="dU4-S3-fcg" id="BEr-bF-rtv"/>
                         <outlet property="titleTextField" destination="pZr-Vh-pej" id="Pue-vV-AlA"/>
                         <outlet property="weatherLabel" destination="LL6-LX-P6z" id="yUB-bG-1nm"/>
