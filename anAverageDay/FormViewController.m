@@ -109,6 +109,16 @@
 
 - (void)viewDidLoad {
     [self.tableView setBackgroundColor:[UIColor colorWithRed:205.0/255.0 green:201.0/255.0 blue:201.0/255.0 alpha:1.0]];
+
+    [self formatTextView:self.foodTextView];
+    [self formatTextView:self.tasksTextView];
+    [self formatTextView:self.extraTextView];
+}
+
+- (void)formatTextView:(UITextView *)textView {
+    [textView.layer setBorderColor:[[[UIColor grayColor] colorWithAlphaComponent:0.5] CGColor]];
+    [textView.layer setBorderWidth:0.5];
+    textView.layer.cornerRadius = 5;
 }
 
 - (void)formatLabel:(UILabel *)label {
@@ -133,9 +143,9 @@
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
     if (indexPath.row >= 4) {
-        return 100;
+        return 105;
     } else {
-        return 70;
+        return 60;
     }
 }
 
