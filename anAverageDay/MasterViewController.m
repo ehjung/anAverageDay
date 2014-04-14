@@ -67,17 +67,12 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MasterViewCell" forIndexPath:indexPath];
     Entry *entry = self.appDelegate.entries[indexPath.row];
     
-    UILabel *dateLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 0, 130, 30)];
-    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 30)];
-    dateLabel.text = entry.date;
-    titleLabel.text = entry.title;
-
     cell.imageView.image = [UIImage imageNamed:@"images.png"];
-    [cell addSubview:dateLabel];
-    [cell addSubview:titleLabel];
+    cell.textLabel.text = entry.title;
+    cell.detailTextLabel.text = entry.date;
     
     return cell;
 }
