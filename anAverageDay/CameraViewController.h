@@ -11,13 +11,20 @@
 
 @interface CameraViewController : UIViewController
 
-@property (nonatomic, strong) AVCaptureDevice *device;
-@property (nonatomic, strong) AVCaptureSession *session;
-@property (nonatomic, strong) AVCaptureVideoPreviewLayer *videoLayer;
+@property (nonatomic, retain) AVCaptureDevice *device;
+@property (nonatomic, retain) AVCaptureSession *session;
+@property (nonatomic, retain) AVCaptureVideoPreviewLayer *videoLayer;
 @property (nonatomic, retain) AVCaptureStillImageOutput *stillImageOutput;
+@property (nonatomic, retain) AVCaptureConnection *captureConnection;
+@property (nonatomic, retain) UIImage *stillImage;
 
 @property (nonatomic, retain) IBOutlet UIView *imagePreview;
+
+/*
 @property (nonatomic, retain) IBOutlet UIImageView *imageView;
 @property (strong, nonatomic) IBOutlet UIButton *cameraButton;
+
+- (IBAction)captureNow;
+ */
 
 @end

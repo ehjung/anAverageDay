@@ -24,6 +24,7 @@
 - (void)viewDidAppear:(BOOL)animated {
     self.session.sessionPreset = AVCaptureSessionPresetMedium;
     self.videoLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:self.session];
+    
     self.videoLayer.frame = self.imagePreview.bounds;
     [self.imagePreview.layer addSublayer:self.videoLayer];
     
@@ -35,6 +36,12 @@
 		NSLog(@"ERROR: trying to open camera: %@", error);
 	}
 	[self.session addInput:input];
+    
+    self.stillImageOutput = [[AVCaptureStillImageOutput alloc] init];
+    NSDictionary *outputSettings = [[NSDictionary alloc] initWithObjectsAndKeys: AVVideoCodecJPEG, AVVideoCodecKey, nil];
+    [self.stillImageOutput setOutputSettings:outputSettings];
+    [self.session addOutput:self.stillImageOutput];
+    
     [self.session startRunning];
 }
 
@@ -64,23 +71,24 @@
 		}
 		if (videoConnection) { break; }
 	}
-	
+	/*
 	[self.stillImageOutput captureStillImageAsynchronouslyFromConnection:videoConnection completionHandler: ^(CMSampleBufferRef imageSampleBuffer, NSError *error)
      {
-/*		 CFDictionaryRef exifAttachments = CMGetAttachment( imageSampleBuffer, kCGImagePropertyExifDictionary, NULL);
+		 CFDictionaryRef exifAttachments = CMGetAttachment( imageSampleBuffer, kCGImagePropertyExifDictionary, NULL);
 		 if (exifAttachments)
 		 {
              // Do something with the attachments.
-  //           NSLog(@"attachements: %@", exifAttachments);
+             NSLog(@"attachements: %@", exifAttachments);
 		 }
          else
              NSLog(@"no attachments");
-  */
+  
          NSData *imageData = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageSampleBuffer];
          UIImage *image = [[UIImage alloc] initWithData:imageData];
          
          self.imageView.image = image;
 	 }];
+     */
 }
 
 /*
