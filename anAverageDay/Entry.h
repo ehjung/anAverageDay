@@ -11,6 +11,7 @@
 @interface Entry : NSObject
 
 @property (nonatomic, strong) NSString *title;
+@property (nonatomic, strong) NSString *date;
 @property (nonatomic, strong) NSMutableArray *content;
 
 @end

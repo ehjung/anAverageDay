@@ -68,12 +68,22 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-
     Entry *entry = self.appDelegate.entries[indexPath.row];
-    cell.textLabel.text = entry.title;
+    
+    UILabel *dateLabel = [[UILabel alloc] initWithFrame:CGRectMake(30, 0, 50, 30)];
+    UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 30)];
+    dateLabel.text = entry.date;
+    titleLabel.text = entry.title;
+
     cell.imageView.image = [UIImage imageNamed:@"images.png"];
+    [cell addSubview:dateLabel];
+    [cell addSubview:titleLabel];
     
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    return 70;
 }
 
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath

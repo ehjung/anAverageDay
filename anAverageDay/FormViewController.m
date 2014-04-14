@@ -53,11 +53,12 @@
 }
 - (IBAction)save:(id)sender {
     self.entry = [[Entry alloc] init];
-    //[self setEntryTitle:self.entry];
+    NSString *date = [self getDate];
     
     self.entry.title = self.titleTextField.text;
+    self.entry.date = date;
     [self addObject:self.titleTextField.text sectionLabel:@"TITLE "];
-    [self addObject:[self getDate] sectionLabel:@"DATE "];
+    [self addObject:date sectionLabel:@"DATE "];
     [self addObject:self.moodTextField.text sectionLabel:@"MOOD "];
     [self addObject:self.weatherTextField.text sectionLabel:@"WEATHER "];
     [self addObject:self.locationTextField.text sectionLabel:@"LOCATION "];
