@@ -53,12 +53,11 @@
 }
 - (IBAction)save:(id)sender {
     self.entry = [[Entry alloc] init];
-    NSString *date = [self getDate];
     
     self.entry.title = self.titleTextField.text;
-    self.entry.date = date;
+    self.entry.date = [self getDateWithTime:NO];
     [self addObject:self.titleTextField.text sectionLabel:@"TITLE "];
-    [self addObject:date sectionLabel:@"DATE "];
+    [self addObject:[self getDateWithTime:YES] sectionLabel:@"DATE "];
     [self addObject:self.moodTextField.text sectionLabel:@"MOOD "];
     [self addObject:self.weatherTextField.text sectionLabel:@"WEATHER "];
     [self addObject:self.locationTextField.text sectionLabel:@"LOCATION "];
@@ -91,9 +90,13 @@
     }
 }
 
-- (NSString *)getDate {
+- (NSString *)getDateWithTime:(BOOL)needTime {
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"MMM-dd-yyyy HH:mm:ss a"];
+    if (needTime == YES) {
+        [dateFormatter setDateFormat:@"MMM-dd-yyyy HH:mm:ss a"];
+    } else {
+        [dateFormatter setDateFormat:@"MMM dd yyyy"];
+    }
     NSString *date = [dateFormatter stringFromDate:[NSDate date]];
     return date;
 }

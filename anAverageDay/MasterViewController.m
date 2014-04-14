@@ -70,7 +70,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     Entry *entry = self.appDelegate.entries[indexPath.row];
     
-    UILabel *dateLabel = [[UILabel alloc] initWithFrame:CGRectMake(30, 0, 50, 30)];
+    UILabel *dateLabel = [[UILabel alloc] initWithFrame:CGRectMake(100, 0, 130, 30)];
     UILabel *titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 100, 30)];
     dateLabel.text = entry.date;
     titleLabel.text = entry.title;
