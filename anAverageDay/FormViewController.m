@@ -130,8 +130,9 @@
     UIView *view = [[UIView alloc] initWithFrame:frame];
     UILabel *header = [[UILabel alloc] initWithFrame:frame];
     
-    NSDictionary *textFormat = @{ NSFontAttributeName:[UIFont fontWithName:@"Helvetica Neue" size:12.0], NSForegroundColorAttributeName:[UIColor whiteColor]};
-    header.attributedText = [[NSMutableAttributedString alloc] initWithString:[self.headers objectAtIndex:section] attributes:textFormat];
+    NSDictionary *textFormat = @{ NSFontAttributeName:[UIFont fontWithName:@"Helvetica Neue" size:12.0], NSForegroundColorAttributeName:[UIColor whiteColor], NSBackgroundColorAttributeName:[UIColor colorWithRed:61.0/255.0 green:89.0/255.0 blue:171.0/255.0 alpha:1.0]};
+    header.attributedText = [[NSMutableAttributedString alloc] initWithString:@"         DETAILS  " attributes:textFormat];
+    header.backgroundColor = [UIColor whiteColor];
     
     [view addSubview:header];
     return view;
