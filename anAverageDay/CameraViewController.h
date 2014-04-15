@@ -20,7 +20,6 @@
 
 @property (nonatomic, retain) IBOutlet UIView *imagePreview;
 @property (strong, nonatomic) IBOutlet UIButton *cameraButton;
-
 @property (nonatomic, retain) UIImageView *imageView;
 
 - (IBAction)captureNow;

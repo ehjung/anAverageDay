@@ -7,6 +7,7 @@
 //
 
 #import "FormViewController.h"
+#import "CameraViewController.h"
 
 @implementation FormViewController
 
@@ -104,11 +105,6 @@
 - (void)viewWillAppear:(BOOL)animated {
     
     self.headers = [NSMutableArray arrayWithObjects:@"  MUNDANE ENTRY", nil];
-    
-    self.takePhotoButton.layer.cornerRadius = 5;
-    self.takePhotoButton.layer.borderWidth = 1;
-    self.takePhotoButton.layer.borderColor = [UIColor colorWithRed:61.0/255.0 green:89.0/255.0 blue:171.0/255.0 alpha:1.0].CGColor;
-    [self.takePhotoButton setTitleColor:[UIColor colorWithRed:61.0/255.0 green:89.0/255.0 blue:171.0/255.0 alpha:1.0] forState:UIControlStateNormal];
 }
 
 - (void)viewDidLoad {
@@ -117,6 +113,18 @@
     [self formatTextView:self.foodTextView];
     [self formatTextView:self.tasksTextView];
     [self formatTextView:self.extraTextView];
+    
+    [self.addPhotoButton setTitleColor:[UIColor colorWithRed:61.0/255.0 green:89.0/255.0 blue:171.0/255.0 alpha:1.0] forState:UIControlStateNormal];
+    
+    CGFloat screenWidth = [[UIScreen mainScreen] bounds].size.width;
+    CAShapeLayer *border = [[CAShapeLayer alloc] init];
+    border.strokeColor = [[UIColor grayColor] CGColor];
+    border.fillColor = nil;
+    border.lineDashPattern = @[@4, @2];
+    border.lineWidth = 0.5;
+    border.path = [[UIBezierPath bezierPathWithRoundedRect:CGRectMake((screenWidth - 280)/2 , 10, 280, 180) cornerRadius:5] CGPath];
+    
+    [self.buttonView.layer addSublayer:border];
 }
 
 - (void)formatTextView:(UITextView *)textView {
@@ -159,6 +167,13 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
 	if (indexPath.section == 0) {
 		[self.titleTextField becomeFirstResponder];
+    }
+}
+
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"cameraView"]) {
+        CameraViewController *destViewController = segue.destinationViewController;
+        destViewController.imageView = self.imageView;
     }
 }
 

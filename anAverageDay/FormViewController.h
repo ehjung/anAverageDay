@@ -41,8 +41,9 @@
 @property (strong, nonatomic) IBOutlet UILabel *tasksLabel;
 @property (strong, nonatomic) IBOutlet UILabel *extraLabel;
 
-@property (strong, nonatomic) IBOutlet UIButton *takePhotoButton;
+@property (strong, nonatomic) IBOutlet UIButton *addPhotoButton;
 @property (strong, nonatomic) IBOutlet UIView *buttonView;
+@property (nonatomic, retain) UIImageView *imageView;
 
 - (IBAction)cancel:(id)sender;
 - (IBAction)save:(id)sender;
