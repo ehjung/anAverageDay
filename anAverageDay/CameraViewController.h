@@ -9,6 +9,12 @@
 #import <UIKit/UIKit.h>
 #import <AVFoundation/AVFoundation.h>
 
+@protocol cameraViewDelegate <NSObject>
+
+- (void) cameraViewControllerDismissed:(UIImageView *)imageViewToPass;
+
+@end
+
 @interface CameraViewController : UIViewController
 
 @property (nonatomic, retain) AVCaptureDevice *device;
@@ -20,7 +26,9 @@
 
 @property (nonatomic, retain) IBOutlet UIView *imagePreview;
 @property (strong, nonatomic) IBOutlet UIButton *cameraButton;
-@property (nonatomic, retain) UIImageView *imageView;
+@property (nonatomic, retain) IBOutlet UIImageView *imageView;
+
+@property (nonatomic, assign) id <cameraViewDelegate> cameraDelegate;
 
 - (IBAction)captureNow;
 

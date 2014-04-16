@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "Entry.h"
+#import "CameraViewController.h"
 
 @class FormViewController;
 
@@ -15,10 +16,11 @@
 
 - (void)formViewControllerDidCancel:(FormViewController *)controller;
 - (void)formViewController:(FormViewController *)controller didAddEntry:(Entry *)entry;
++ (void)setPhoto:(UIImageView *)photoView;
 
 @end
 
-@interface FormViewController : UITableViewController
+@interface FormViewController : UITableViewController <cameraViewDelegate>
 
 @property (nonatomic, weak) id <FormViewControllerDelegate> delegate;
 @property (nonatomic, strong) Entry *entry;
@@ -43,7 +45,7 @@
 
 @property (strong, nonatomic) IBOutlet UIButton *addPhotoButton;
 @property (strong, nonatomic) IBOutlet UIView *buttonView;
-@property (nonatomic, retain) UIImageView *imageView;
+@property (nonatomic, retain) IBOutlet UIImageView *photoView;
 
 - (IBAction)cancel:(id)sender;
 - (IBAction)save:(id)sender;

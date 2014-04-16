@@ -15,11 +15,13 @@
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:aDecoder]) {
+        //self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
         //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardShown:) name:UIKeyboardDidShowNotification object:nil];
 //        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardHidden:) name:UIKeyboardDidHideNotification object:nil];
     }
     return self;
 }
+
 /*
 -(void) keyboardShown:(NSNotification*) notification {
     self.initialHeight = self.tableView.frame.size.height;
@@ -103,7 +105,6 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    
     self.headers = [NSMutableArray arrayWithObjects:@"  MUNDANE ENTRY", nil];
 }
 
@@ -170,11 +171,17 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     }
 }
 
+- (void)cameraViewControllerDismissed:(UIImageView *)imageViewToPass {
+    self.photoView = imageViewToPass;
+}
+
+/*
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"cameraView"]) {
         CameraViewController *destViewController = segue.destinationViewController;
         destViewController.imageView = self.imageView;
+        [self.buttonView addSubview:self.imageView];
     }
 }
-
+*/
 @end
