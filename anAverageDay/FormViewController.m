@@ -15,7 +15,7 @@
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:aDecoder]) {
-        self.photoView = [[UIImageView alloc] initWithFrame:CGRectMake(([UIScreen mainScreen].bounds.size.width - 280)/2 , 10, 275, 175)];
+        self.photoImageView = [[UIImageView alloc] init];
     }
     return self;
 }
@@ -94,7 +94,7 @@
     border.lineWidth = 0.5;
     border.path = [[UIBezierPath bezierPathWithRoundedRect:CGRectMake((screenWidth - 280)/2 , 10, 280, 180) cornerRadius:5] CGPath];
     
-    [self.buttonView.layer addSublayer:border];
+    [self.photoView.layer addSublayer:border];
 }
 
 - (void)formatTextView:(UITextView *)textView {
@@ -142,8 +142,8 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 
 - (IBAction)unwindToFormViewController:(UIStoryboardSegue *)unwindSegue {
     CameraViewController *sourceViewController = [unwindSegue sourceViewController];
-    self.photoView = sourceViewController.imageView;
-    [self.buttonView addSubview:self.photoView];
+    self.photoImageView = sourceViewController.imageView;
+    [self.photoView addSubview:self.photoImageView];
 }
 
 @end

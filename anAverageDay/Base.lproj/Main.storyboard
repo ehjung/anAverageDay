@@ -233,7 +233,6 @@
                     </navigationItem>
                     <connections>
                         <outlet property="addPhotoButton" destination="zom-M6-yzp" id="Ylv-SB-kRE"/>
-                        <outlet property="buttonView" destination="oux-Pm-T0F" id="XOa-mc-qIN"/>
                         <outlet property="extraLabel" destination="5Zp-Ck-H28" id="mv3-nj-4QZ"/>
                         <outlet property="extraTextView" destination="VlA-fv-Nsj" id="S2m-Na-PXZ"/>
                         <outlet property="foodLabel" destination="cda-S7-GBd" id="ULW-rL-zlt"/>
@@ -242,6 +241,7 @@
                         <outlet property="locationTextField" destination="KmJ-Vg-mEp" id="45G-Sa-gTh"/>
                         <outlet property="moodLabel" destination="Vuc-8x-rzF" id="WGR-f2-aDk"/>
                         <outlet property="moodTextField" destination="bxi-k4-lt7" id="dtz-pD-Ktp"/>
+                        <outlet property="photoView" destination="oux-Pm-T0F" id="uwO-XG-fG6"/>
                         <outlet property="tasksLabel" destination="55c-dU-xop" id="G1v-rm-s6R"/>
                         <outlet property="tasksTextView" destination="Doe-NG-U1P" id="ekO-54-VgI"/>
                         <outlet property="titleLabel" destination="dU4-S3-fcg" id="BEr-bF-rtv"/>

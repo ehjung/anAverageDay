@@ -16,7 +16,6 @@
 
 - (void)formViewControllerDidCancel:(FormViewController *)controller;
 - (void)formViewController:(FormViewController *)controller didAddEntry:(Entry *)entry;
-+ (void)setPhoto:(UIImageView *)photoView;
 
 @end
 
@@ -44,8 +43,8 @@
 @property (strong, nonatomic) IBOutlet UILabel *extraLabel;
 
 @property (strong, nonatomic) IBOutlet UIButton *addPhotoButton;
-@property (strong, nonatomic) IBOutlet UIView *buttonView;
-@property (nonatomic, retain) UIImageView *photoView;
+@property (strong, nonatomic) IBOutlet UIView *photoView;
+@property (nonatomic, retain) UIImageView *photoImageView;
 
 - (IBAction)cancel:(id)sender;
 - (IBAction)save:(id)sender;
