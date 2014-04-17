@@ -176,6 +176,13 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     self.entry.thumbnail = self.photoView.image;
 }
 
+- (IBAction)unwindToFormViewController:(UIStoryboardSegue *)unwindSegue {
+    CameraViewController *sourceViewController = [unwindSegue sourceViewController];
+    self.photoView = sourceViewController.imageView;
+    [self.buttonView addSubview:self.photoView];
+}
+
+
 /*
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     if ([[segue identifier] isEqualToString:@"cameraView"]) {

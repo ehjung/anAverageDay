@@ -18,6 +18,8 @@
 - (id)initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:aDecoder]) {
         self.session = [[AVCaptureSession alloc] init];
+        self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 280, 180)];
+        
     }
     return self;
 }
@@ -79,21 +81,21 @@
          UIImage *image = [[UIImage alloc] initWithData:imageData];
          [self.imageView setImage:image];
 	 }];
-    
-    [self.cameraDelegate cameraViewControllerDismissed:self.imageView];
-    //[self.navigationController popToRootViewControllerAnimated:YES];
+//    [self.cameraDelegate cameraViewControllerDismissed:self.imageView];
+//    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
+/*
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     // Get the new view controller using [segue destinationViewController].
     NSLog(@"Test");
     // Pass the selected object to the new view controller.
 }
-
-
+*/
+    
 @end
