@@ -28,6 +28,7 @@
     
     self.entry.title = self.titleTextField.text;
     self.entry.date = [self getDateWithTime:NO];
+    self.entry.thumbnail = self.photoImageView.image;
     [self addObject:self.titleTextField.text sectionLabel:@"TITLE "];
     [self addObject:[self getDateWithTime:YES] sectionLabel:@"DATE "];
     [self addObject:self.moodTextField.text sectionLabel:@"MOOD "];
