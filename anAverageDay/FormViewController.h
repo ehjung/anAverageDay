@@ -20,7 +20,7 @@
 
 @end
 
-@interface FormViewController : UITableViewController <cameraViewDelegate>
+@interface FormViewController : UITableViewController
 
 @property (nonatomic, weak) id <FormViewControllerDelegate> delegate;
 @property (nonatomic, strong) Entry *entry;
@@ -45,7 +45,7 @@
 
 @property (strong, nonatomic) IBOutlet UIButton *addPhotoButton;
 @property (strong, nonatomic) IBOutlet UIView *buttonView;
-@property (nonatomic, retain) IBOutlet UIImageView *photoView;
+@property (nonatomic, retain) UIImageView *photoView;
 
 - (IBAction)cancel:(id)sender;
 - (IBAction)save:(id)sender;

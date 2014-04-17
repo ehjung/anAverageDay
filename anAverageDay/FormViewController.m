@@ -15,42 +15,11 @@
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:aDecoder]) {
-        //self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
-        //[[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardShown:) name:UIKeyboardDidShowNotification object:nil];
-//        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardHidden:) name:UIKeyboardDidHideNotification object:nil];
+        self.photoView = [[UIImageView alloc] initWithFrame:CGRectMake(([UIScreen mainScreen].bounds.size.width - 280)/2 , 10, 275, 175)];
     }
     return self;
 }
 
-/*
--(void) keyboardShown:(NSNotification*) notification {
-    self.initialHeight = self.tableView.frame.size.height;
-    
-    CGRect initialFrame = [[[notification userInfo] objectForKey:UIKeyboardFrameEndUserInfoKey] CGRectValue];
-    CGRect convertedFrame = [self.view convertRect:initialFrame fromView:nil];
-    CGRect tableFrame = self.tableView.frame;
-    tableFrame.size.height = convertedFrame.origin.y;
-    self.tableView.frame = tableFrame;
-}
-
--(void) keyboardHidden:(NSNotification*) notification {
-    CGRect tableFrame = self.tableView.frame;
-    tableFrame.size.height = self.initialHeight;
-    [UIView beginAnimations:@"TableViewDown" context:NULL];
-    [UIView setAnimationDuration:0.3f];
-    self.tableView.frame = tableFrame;
-    [UIView commitAnimations];
-}
-
--(void) scrollToCell:(NSIndexPath*) path {
-    [self.tableView scrollToRowAtIndexPath:path atScrollPosition:UITableViewScrollPositionNone animated:YES];
-}
-
--(void) textFieldDidBeginEditing:(UITextField *)textField {
-    NSIndexPath* path = [NSIndexPath indexPathForRow:row inSection:section];
-    [self performSelector:@selector(scrollToCell:) withObject:path afterDelay:0.5f];
-}
-*/
 - (IBAction)cancel:(id)sender {
     [self.delegate formViewControllerDidCancel:self];
 }
@@ -171,25 +140,10 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
     }
 }
 
-- (void)cameraViewControllerDismissed:(UIImageView *)imageViewToPass {
-    self.photoView = imageViewToPass;
-    self.entry.thumbnail = self.photoView.image;
-}
-
 - (IBAction)unwindToFormViewController:(UIStoryboardSegue *)unwindSegue {
     CameraViewController *sourceViewController = [unwindSegue sourceViewController];
     self.photoView = sourceViewController.imageView;
     [self.buttonView addSubview:self.photoView];
 }
 
-
-/*
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    if ([[segue identifier] isEqualToString:@"cameraView"]) {
-        CameraViewController *destViewController = segue.destinationViewController;
-        destViewController.imageView = self.imageView;
-        [self.buttonView addSubview:self.imageView];
-    }
-}
-*/
 @end
