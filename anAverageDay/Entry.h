@@ -13,5 +13,6 @@
 @property (nonatomic, strong) NSString *title;
 @property (nonatomic, strong) NSString *date;
 @property (nonatomic, strong) NSMutableArray *content;
+@property (nonatomic, strong) UIImage *thumbnail;
 
 @end

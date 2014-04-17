@@ -173,6 +173,7 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 
 - (void)cameraViewControllerDismissed:(UIImageView *)imageViewToPass {
     self.photoView = imageViewToPass;
+    self.entry.thumbnail = self.photoView.image;
 }
 
 /*

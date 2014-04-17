@@ -70,7 +70,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MasterViewCell" forIndexPath:indexPath];
     Entry *entry = self.appDelegate.entries[indexPath.row];
     
-//    cell.imageView.image = [UIImage imageNamed:@"images.png"];
+    cell.imageView.image = entry.thumbnail;
     cell.textLabel.text = entry.title;
     cell.detailTextLabel.text = entry.date;
     
