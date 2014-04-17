@@ -18,7 +18,7 @@
 - (id)initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:aDecoder]) {
         self.session = [[AVCaptureSession alloc] init];
-        self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 280, 180)];
+        self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 275, 175)];
         
     }
     return self;
@@ -81,8 +81,6 @@
          UIImage *image = [[UIImage alloc] initWithData:imageData];
          [self.imageView setImage:image];
 	 }];
-//    [self.cameraDelegate cameraViewControllerDismissed:self.imageView];
-//    [self.navigationController popToRootViewControllerAnimated:YES];
 }
 
 

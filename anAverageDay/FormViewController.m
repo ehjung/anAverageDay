@@ -100,7 +100,7 @@
 - (void)formatTextView:(UITextView *)textView {
     [textView.layer setBorderColor:[[[UIColor grayColor] colorWithAlphaComponent:0.5] CGColor]];
     [textView.layer setBorderWidth:0.5];
-    textView.layer.cornerRadius = 5;
+    textView.layer.cornerRadius = 10;
 }
 
 - (void)formatLabel:(UILabel *)label {
@@ -143,6 +143,9 @@ didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 - (IBAction)unwindToFormViewController:(UIStoryboardSegue *)unwindSegue {
     CameraViewController *sourceViewController = [unwindSegue sourceViewController];
     self.photoImageView = sourceViewController.imageView;
+    [self.photoImageView setCenter:CGPointMake(self.photoView.frame.size.width/2, self.photoView.frame.size.height/2 - 3.5)];
+    self.photoImageView.layer.cornerRadius = 10;
+    self.photoImageView.clipsToBounds = YES;
     [self.photoView addSubview:self.photoImageView];
 }
 
