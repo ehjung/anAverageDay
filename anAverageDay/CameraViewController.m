@@ -52,6 +52,8 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    UIImage *buttonImage = [UIImage imageNamed:@"button.png"];
+    [self.cameraButton setImage:buttonImage forState:UIControlStateNormal];
 }
 
 - (void)didReceiveMemoryWarning
