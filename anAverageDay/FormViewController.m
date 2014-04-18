@@ -66,7 +66,7 @@
     
     self.entry.title = self.titleTextField.text;
     self.entry.date = [self getDateWithTime:NO];
-    self.entry.thumbnail = [FormViewController scaleThenCropImage:self.photoImageView.image targetHeight:100 targetWidth:100];
+    self.entry.thumbnail = [FormViewController scaleThenCropImage:self.photoImageView.image targetHeight:90 targetWidth:90];
     [self addObject:self.titleTextField.text sectionLabel:@"TITLE "];
     [self addObject:[self getDateWithTime:YES] sectionLabel:@"DATE "];
     [self addObject:self.moodTextField.text sectionLabel:@"MOOD "];
@@ -117,14 +117,14 @@
 }
 
 - (void)viewDidLoad {
-    [self.tableView setBackgroundColor:[UIColor colorWithRed:205.0/255.0 green:201.0/255.0 blue:201.0/255.0 alpha:1.0]];
+    [self.tableView setBackgroundColor:[UIColor whiteColor]];
+    [self.navigationItem.rightBarButtonItem setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor], NSFontAttributeName:[UIFont fontWithName:@"HelveticaNeue-Thin" size:20.0]} forState:UIControlStateNormal];
+    [self.navigationItem.leftBarButtonItem setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor whiteColor], NSFontAttributeName:[UIFont fontWithName:@"HelveticaNeue-Thin" size:20.0]} forState:UIControlStateNormal];
 
     [self formatTextView:self.foodTextView];
     [self formatTextView:self.tasksTextView];
     [self formatTextView:self.extraTextView];
-    
-    [self.addPhotoButton setTitleColor:[UIColor colorWithRed:61.0/255.0 green:89.0/255.0 blue:171.0/255.0 alpha:1.0] forState:UIControlStateNormal];
-    
+        
     CGFloat screenWidth = [[UIScreen mainScreen] bounds].size.width;
     CAShapeLayer *border = [[CAShapeLayer alloc] init];
     border.strokeColor = [[UIColor grayColor] CGColor];
@@ -151,7 +151,7 @@
     UIView *view = [[UIView alloc] initWithFrame:frame];
     UILabel *header = [[UILabel alloc] initWithFrame:frame];
     
-    NSDictionary *textFormat = @{ NSFontAttributeName:[UIFont fontWithName:@"Helvetica Neue" size:12.0], NSForegroundColorAttributeName:[UIColor whiteColor], NSBackgroundColorAttributeName:[UIColor colorWithRed:61.0/255.0 green:89.0/255.0 blue:171.0/255.0 alpha:1.0]};
+    NSDictionary *textFormat = @{ NSFontAttributeName:[UIFont fontWithName:@"Helvetica Neue" size:12.0], NSForegroundColorAttributeName:[UIColor whiteColor], NSBackgroundColorAttributeName:[UIColor colorWithRed:82.0/255.0 green:139.0/255.0 blue:139.0/255.0 alpha:1.0]};
     header.attributedText = [[NSMutableAttributedString alloc] initWithString:@"         DETAILS  " attributes:textFormat];
     header.backgroundColor = [UIColor whiteColor];
     
