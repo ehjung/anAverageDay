@@ -28,6 +28,9 @@ static NSString * entryCellIdentifier = @"EntryCell";
 {
     [super viewDidLoad];
     
+    self.imageView.image = self.entry.photo;
+    self.imageView.layer.cornerRadius = 10;
+    self.imageView.clipsToBounds = YES;
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     

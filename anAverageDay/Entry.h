@@ -14,5 +14,6 @@
 @property (nonatomic, strong) NSString *date;
 @property (nonatomic, strong) NSMutableArray *content;
 @property (nonatomic, strong) UIImage *thumbnail;
+@property (nonatomic, strong) UIImage *photo;
 
 @end

@@ -14,5 +14,6 @@
 
 @property (nonatomic, strong) AppDelegate *appDelegate;
 @property (nonatomic, strong) Entry *entry;
+@property (nonatomic, strong) IBOutlet UIImageView *imageView;
 
 @end

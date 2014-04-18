@@ -70,7 +70,7 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"MasterViewCell" forIndexPath:indexPath];
     Entry *entry = self.appDelegate.entries[indexPath.row];
     
-    NSAttributedString *title = [[NSAttributedString alloc] initWithString:entry.title attributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica" size:20.0], NSForegroundColorAttributeName:[UIColor colorWithRed:61.0/255.0 green:89.0/255.0 blue:171.0/255.0 alpha:1.0]}];
+    NSAttributedString *title = [[NSAttributedString alloc] initWithString:entry.title attributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica" size:20.0], NSForegroundColorAttributeName:[UIColor colorWithRed:82.0/255.0 green:139.0/255.0 blue:139.0/255.0 alpha:1.0]}];
     
     [self formatThumbnail:entry.thumbnail inCell:cell];
     cell.textLabel.attributedText = title;
