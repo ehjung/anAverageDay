@@ -73,6 +73,7 @@
     NSAttributedString *title = [[NSAttributedString alloc] initWithString:entry.title attributes:@{NSFontAttributeName:[UIFont fontWithName:@"Helvetica" size:20.0], NSForegroundColorAttributeName:[UIColor colorWithRed:61.0/255.0 green:89.0/255.0 blue:171.0/255.0 alpha:1.0]}];
     
     cell.imageView.image = entry.thumbnail;
+    
     cell.textLabel.attributedText = title;
     cell.detailTextLabel.text = entry.date;
     

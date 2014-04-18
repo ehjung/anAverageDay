@@ -48,5 +48,6 @@
 
 - (IBAction)cancel:(id)sender;
 - (IBAction)save:(id)sender;
++ (UIImage *)scaleThenCropImage:(UIImage *)image targetHeight:(CGFloat)targetHeight targetWidth:(CGFloat)targetWidth;
 
 @end

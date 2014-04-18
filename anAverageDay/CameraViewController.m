@@ -79,49 +79,9 @@
      {
          NSData *imageData = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageSampleBuffer];
          UIImage *image = [[UIImage alloc] initWithData:imageData];
-         image = [self scaleThenCropImage:image];
+         image = [FormViewController scaleThenCropImage:image targetHeight:175 targetWidth:275];
          [self.imageView setImage:image];
 	 }];
-}
-
-- (UIImage *)scaleThenCropImage:(UIImage *)image {
-    CGFloat width = image.size.width;
-    CGFloat height = image.size.height;
-    CGFloat targetWidth = 275;
-    CGFloat targetHeight = 175;
-    CGFloat scaleFactor;
-    CGSize targetSize = CGSizeMake(275, 175);
-    
-    CGFloat widthFactor = targetWidth / width;
-    CGFloat heightFactor = targetHeight / height;
-    if (widthFactor > heightFactor) {
-        scaleFactor = widthFactor;
-    } else {
-        scaleFactor = heightFactor;
-    }
-    
-    CGFloat scaledWidth = width * scaleFactor;
-    CGFloat scaledHeight = height * scaleFactor;
-    CGPoint thumbnailPoint = CGPointMake(0, 0);
-    if (widthFactor > heightFactor)
-    {
-        thumbnailPoint.y = (targetHeight - scaledHeight) * 0.5;
-    }
-    else
-    {
-        if (widthFactor < heightFactor)
-        {
-            thumbnailPoint.x = (targetWidth - scaledWidth) * 0.5;
-        }
-    }
-    
-    UIGraphicsBeginImageContext(targetSize);
-    CGRect thumbnailRect = CGRectMake(thumbnailPoint.x, thumbnailPoint.y, scaledWidth, scaledHeight);
-    [image drawInRect:thumbnailRect];
-    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    
-    return newImage;
 }
    
 @end

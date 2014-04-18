@@ -13,6 +13,44 @@
 
 @synthesize delegate;
 
++ (UIImage *)scaleThenCropImage:(UIImage *)image targetHeight:(CGFloat)targetHeight targetWidth:(CGFloat)targetWidth {
+    CGFloat width = image.size.width;
+    CGFloat height = image.size.height;
+    CGFloat scaleFactor;
+    CGSize targetSize = CGSizeMake(targetWidth, targetHeight);
+    
+    CGFloat widthFactor = targetWidth / width;
+    CGFloat heightFactor = targetHeight / height;
+    if (widthFactor > heightFactor) {
+        scaleFactor = widthFactor;
+    } else {
+        scaleFactor = heightFactor;
+    }
+    
+    CGFloat scaledWidth = width * scaleFactor;
+    CGFloat scaledHeight = height * scaleFactor;
+    CGPoint thumbnailPoint = CGPointMake(0, 0);
+    if (widthFactor > heightFactor)
+    {
+        thumbnailPoint.y = (targetHeight - scaledHeight) * 0.5;
+    }
+    else
+    {
+        if (widthFactor < heightFactor)
+        {
+            thumbnailPoint.x = (targetWidth - scaledWidth) * 0.5;
+        }
+    }
+    
+    UIGraphicsBeginImageContext(targetSize);
+    CGRect thumbnailRect = CGRectMake(thumbnailPoint.x, thumbnailPoint.y, scaledWidth, scaledHeight);
+    [image drawInRect:thumbnailRect];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return newImage;
+}
+
 - (id)initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:aDecoder]) {
         self.photoImageView = [[UIImageView alloc] init];
@@ -28,7 +66,7 @@
     
     self.entry.title = self.titleTextField.text;
     self.entry.date = [self getDateWithTime:NO];
-    self.entry.thumbnail = self.photoImageView.image;
+    self.entry.thumbnail = [FormViewController scaleThenCropImage:self.photoImageView.image targetHeight:100 targetWidth:100];
     [self addObject:self.titleTextField.text sectionLabel:@"TITLE "];
     [self addObject:[self getDateWithTime:YES] sectionLabel:@"DATE "];
     [self addObject:self.moodTextField.text sectionLabel:@"MOOD "];
