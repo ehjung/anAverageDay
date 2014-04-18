@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import <QuartzCore/QuartzCore.h>
 #import "FormViewController.h"
 #import "AppDelegate.h"
 #import "Entry.h"
