@@ -80,7 +80,11 @@
 }
 
 - (void)formatThumbnail:(UIImage *)thumbnail inCell:(UITableViewCell *)cell {
-    cell.imageView.image = thumbnail;
+    if (thumbnail == nil) {
+        cell.imageView.image = [UIImage imageNamed:@"emptyThumbnail.png"];
+    } else {
+        cell.imageView.image = thumbnail;
+    }
     cell.imageView.layer.masksToBounds = YES;
     cell.imageView.layer.cornerRadius = 10;
 }

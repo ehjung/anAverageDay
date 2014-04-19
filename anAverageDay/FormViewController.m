@@ -66,7 +66,9 @@
     
     self.entry.title = self.titleTextField.text;
     self.entry.date = [self getDateWithTime:NO];
-    self.entry.thumbnail = [FormViewController scaleThenCropImage:self.photoImageView.image targetHeight:90 targetWidth:90];
+    if (self.photoImageView.image != nil) {
+        self.entry.thumbnail = [FormViewController scaleThenCropImage:self.photoImageView.image targetHeight:90 targetWidth:90];
+    }
     self.entry.photo = self.photoImageView.image;
     
     [self addObject:self.titleTextField.text sectionLabel:@"TITLE "];

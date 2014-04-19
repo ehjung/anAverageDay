@@ -28,14 +28,14 @@ static NSString * entryCellIdentifier = @"EntryCell";
 {
     [super viewDidLoad];
     
-    self.imageView.image = self.entry.photo;
+    if (self.entry.photo == nil) {
+        self.imageView.image = [UIImage imageNamed:@"emptyPhoto.png"];
+    } else {
+        self.imageView.image = self.entry.photo;
+    }
+    
     self.imageView.layer.cornerRadius = 10;
     self.imageView.clipsToBounds = YES;
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
 
 - (void)didReceiveMemoryWarning
