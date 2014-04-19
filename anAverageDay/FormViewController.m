@@ -118,7 +118,6 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     self.headers = [NSMutableArray arrayWithObjects:@"  MUNDANE ENTRY", nil];
-
 }
 
 - (void)viewDidLoad {
@@ -139,7 +138,68 @@
     border.path = [[UIBezierPath bezierPathWithRoundedRect:CGRectMake((screenWidth - 280)/2 , 10, 280, 180) cornerRadius:5] CGPath];
     
     [self.photoView.layer addSublayer:border];
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillShow:)
+                                                 name:UIKeyboardWillShowNotification
+                                               object:self.view.window];
+    // register for keyboard notifications
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(keyboardWillHide:)
+                                                 name:UIKeyboardWillHideNotification
+                                               object:self.view.window];
+    self.keyboardIsShown = NO;
+    //make contentSize bigger than your scrollSize (you will need to figure out for your own use case)
+    CGSize scrollContentSize = CGSizeMake(320, 345);
+    self.tableView.contentSize = scrollContentSize;
 }
+
+- (void)keyboardWillHide:(NSNotification *)n
+{
+    NSDictionary* userInfo = [n userInfo];
+    
+    // get the size of the keyboard
+    CGSize keyboardSize = [[userInfo objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    
+    // resize the scrollview
+    CGRect viewFrame = self.tableView.frame;
+    // I'm also subtracting a constant kTabBarHeight because my UIScrollView was offset by the UITabBar so really only the portion of the keyboard that is leftover pass the UITabBar is obscuring my UIScrollView.
+    viewFrame.size.height += (keyboardSize.height);
+    
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationBeginsFromCurrentState:YES];
+    [self.tableView setFrame:viewFrame];
+    [UIView commitAnimations];
+    
+    self.keyboardIsShown = NO;
+}
+
+- (void)keyboardWillShow:(NSNotification *)n
+{
+    // This is an ivar I'm using to ensure that we do not do the frame size adjustment on the `UIScrollView` if the keyboard is already shown.  This can happen if the user, after fixing editing a `UITextField`, scrolls the resized `UIScrollView` to another `UITextField` and attempts to edit the next `UITextField`.  If we were to resize the `UIScrollView` again, it would be disastrous.  NOTE: The keyboard notification will fire even when the keyboard is already shown.
+    if (self.keyboardIsShown) {
+        return;
+    }
+    
+    NSDictionary* userInfo = [n userInfo];
+    
+    // get the size of the keyboard
+    CGSize keyboardSize = [[userInfo objectForKey:UIKeyboardFrameBeginUserInfoKey] CGRectValue].size;
+    
+    // resize the noteView
+    CGRect viewFrame = self.tableView.frame;
+    // I'm also subtracting a constant kTabBarHeight because my UIScrollView was offset by the UITabBar so really only the portion of the keyboard that is leftover pass the UITabBar is obscuring my UIScrollView.
+    viewFrame.size.height -= (keyboardSize.height);
+    
+    [UIView beginAnimations:nil context:NULL];
+    [UIView setAnimationBeginsFromCurrentState:YES];
+    [self.tableView setFrame:viewFrame];
+    [UIView commitAnimations];
+//    [self.tableView scrollRectToVisible:activeField.frame animated:YES];
+    self.keyboardIsShown = YES;
+}
+
+# pragma mark - Cell formatting
 
 - (void)formatTextView:(UITextView *)textView {
     [textView.layer setBorderColor:[[[UIColor grayColor] colorWithAlphaComponent:0.5] CGColor]];
@@ -179,10 +239,34 @@
 - (void)tableView:(UITableView *)tableView
 didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
-	if (indexPath.section == 0) {
-		[self.titleTextField becomeFirstResponder];
+    switch (indexPath.section) {
+        case 0:
+            [self.titleTextField becomeFirstResponder];
+            break;
+        case 1:
+            [self.moodTextField becomeFirstResponder];
+            break;
+        case 2:
+            [self.weatherTextField becomeFirstResponder];
+            break;
+        case 3:
+            [self.locationTextField becomeFirstResponder];
+            break;
+        case 4:
+            [self.foodTextView becomeFirstResponder];
+            break;
+        case 5:
+            [self.tasksTextView becomeFirstResponder];
+            break;
+        case 6:
+            [self.extraTextView becomeFirstResponder];
+            break;
+        default:
+            break;
     }
 }
+
+#pragma mark - segue
 
 - (IBAction)unwindToFormViewController:(UIStoryboardSegue *)unwindSegue {
     CameraViewController *sourceViewController = [unwindSegue sourceViewController];
