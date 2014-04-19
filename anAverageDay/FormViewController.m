@@ -118,6 +118,7 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     self.headers = [NSMutableArray arrayWithObjects:@"  MUNDANE ENTRY", nil];
+
 }
 
 - (void)viewDidLoad {
