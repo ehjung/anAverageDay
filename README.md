@@ -2,8 +2,8 @@ Have you ever had those completely mundane days that were just so ordinary that 
 
 An IOS app created to experiment for fun.
 
-![imageRow1 col1](IMG_0015.PNG)  ![imageRow1 col2](IMG_0017.PNG)
+![Alt text](IMG_0015.PNG?raw=true)  ![Alt text](IMG_0017.PNG?raw=true)
 
-![imageRow2 col1](IMG_0018.PNG)  ![imageRow2 col2](IMG_0019.PNG)
+![Alt text](IMG_0018.PNG?raw=true)  ![Alt text](IMG_0019.PNG?raw=true)
 
-![imageRow3	col1](IMG_0020.PNG)  ![imageRow3 col2](IMG_0021.PNG)
+![Alt text](IMG_0020.PNG?raw=true)  ![Alt text](IMG_0021.PNG?raw=true)
