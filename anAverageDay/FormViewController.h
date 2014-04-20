@@ -23,8 +23,6 @@
 
 @property (nonatomic, weak) id <FormViewControllerDelegate> delegate;
 @property (nonatomic, strong) Entry *entry;
-@property (nonatomic, strong) NSMutableArray *headers;
-@property (nonatomic) CGFloat initialHeight;
 @property (nonatomic) BOOL keyboardIsShown;
 
 @property (strong, nonatomic) IBOutlet UITextField *titleTextField;

@@ -25,14 +25,14 @@
 }
 
 - (void)viewDidAppear:(BOOL)animated {
+    // set up video session and video preview layer
     self.session.sessionPreset = AVCaptureSessionPresetMedium;
     self.videoLayer = [[AVCaptureVideoPreviewLayer alloc] initWithSession:self.session];
-    
     self.videoLayer.frame = self.imagePreview.bounds;
     [self.imagePreview.layer addSublayer:self.videoLayer];
-    
     self.device = [AVCaptureDevice defaultDeviceWithMediaType:AVMediaTypeVideo];
 	
+    // add input device
 	NSError *error = nil;
 	AVCaptureDeviceInput *input = [AVCaptureDeviceInput deviceInputWithDevice:self.device error:&error];
 	if (!input) {
@@ -40,6 +40,7 @@
 	}
 	[self.session addInput:input];
     
+    // add output
     self.stillImageOutput = [[AVCaptureStillImageOutput alloc] init];
     NSDictionary *outputSettings = [[NSDictionary alloc] initWithObjectsAndKeys: AVVideoCodecJPEG, AVVideoCodecKey, nil];
     [self.stillImageOutput setOutputSettings:outputSettings];
@@ -51,7 +52,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
     UIImage *buttonImage = [UIImage imageNamed:@"button.png"];
     [self.cameraButton setImage:buttonImage forState:UIControlStateNormal];
 }
@@ -77,6 +77,7 @@
 		if (videoConnection) { break; }
 	}
 	
+    // AVCapture image to imageView image
 	[self.stillImageOutput captureStillImageAsynchronouslyFromConnection:videoConnection completionHandler: ^(CMSampleBufferRef imageSampleBuffer, NSError *error)
      {
          NSData *imageData = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageSampleBuffer];

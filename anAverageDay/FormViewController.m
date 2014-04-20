@@ -13,44 +13,6 @@
 
 @synthesize delegate;
 
-+ (UIImage *)scaleThenCropImage:(UIImage *)image targetHeight:(CGFloat)targetHeight targetWidth:(CGFloat)targetWidth {
-    CGFloat width = image.size.width;
-    CGFloat height = image.size.height;
-    CGFloat scaleFactor;
-    CGSize targetSize = CGSizeMake(targetWidth, targetHeight);
-    
-    CGFloat widthFactor = targetWidth / width;
-    CGFloat heightFactor = targetHeight / height;
-    if (widthFactor > heightFactor) {
-        scaleFactor = widthFactor;
-    } else {
-        scaleFactor = heightFactor;
-    }
-    
-    CGFloat scaledWidth = width * scaleFactor;
-    CGFloat scaledHeight = height * scaleFactor;
-    CGPoint thumbnailPoint = CGPointMake(0, 0);
-    if (widthFactor > heightFactor)
-    {
-        thumbnailPoint.y = (targetHeight - scaledHeight) * 0.5;
-    }
-    else
-    {
-        if (widthFactor < heightFactor)
-        {
-            thumbnailPoint.x = (targetWidth - scaledWidth) * 0.5;
-        }
-    }
-    
-    UIGraphicsBeginImageContext(targetSize);
-    CGRect thumbnailRect = CGRectMake(thumbnailPoint.x, thumbnailPoint.y, scaledWidth, scaledHeight);
-    [image drawInRect:thumbnailRect];
-    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    
-    return newImage;
-}
-
 - (id)initWithCoder:(NSCoder *)aDecoder {
     if (self = [super initWithCoder:aDecoder]) {
         self.photoImageView = [[UIImageView alloc] init];
@@ -116,9 +78,7 @@
     return date;
 }
 
-- (void)viewWillAppear:(BOOL)animated {
-    self.headers = [NSMutableArray arrayWithObjects:@"  MUNDANE ENTRY", nil];
-}
+#pragma mark - view and keyboard
 
 - (void)viewDidLoad {
     [self.tableView setBackgroundColor:[UIColor whiteColor]];
@@ -128,16 +88,7 @@
     [self formatTextView:self.foodTextView];
     [self formatTextView:self.tasksTextView];
     [self formatTextView:self.extraTextView];
-        
-    CGFloat screenWidth = [[UIScreen mainScreen] bounds].size.width;
-    CAShapeLayer *border = [[CAShapeLayer alloc] init];
-    border.strokeColor = [[UIColor grayColor] CGColor];
-    border.fillColor = nil;
-    border.lineDashPattern = @[@4, @2];
-    border.lineWidth = 0.5;
-    border.path = [[UIBezierPath bezierPathWithRoundedRect:CGRectMake((screenWidth - 280)/2 , 10, 280, 180) cornerRadius:5] CGPath];
-    
-    [self.photoView.layer addSublayer:border];
+    [self formatPhotoView];
     
     [[NSNotificationCenter defaultCenter] addObserver:self
                                              selector:@selector(keyboardWillShow:)
@@ -150,6 +101,18 @@
     self.keyboardIsShown = NO;
     CGSize scrollContentSize = CGSizeMake(320, 345);
     self.tableView.contentSize = scrollContentSize;
+}
+
+- (void)formatPhotoView {
+    CGFloat screenWidth = [[UIScreen mainScreen] bounds].size.width;
+    CAShapeLayer *border = [[CAShapeLayer alloc] init];
+    border.strokeColor = [[UIColor grayColor] CGColor];
+    border.fillColor = nil;
+    border.lineDashPattern = @[@4, @2];
+    border.lineWidth = 0.5;
+    border.path = [[UIBezierPath bezierPathWithRoundedRect:CGRectMake((screenWidth - 280)/2 , 10, 280, 180) cornerRadius:5] CGPath];
+    
+    [self.photoView.layer addSublayer:border];
 }
 
 - (void)keyboardWillHide:(NSNotification *)n
@@ -223,6 +186,46 @@
     } else {
         return 60;
     }
+}
+
+#pragma mark - image resizing
+
++ (UIImage *)scaleThenCropImage:(UIImage *)image targetHeight:(CGFloat)targetHeight targetWidth:(CGFloat)targetWidth {
+    CGFloat width = image.size.width;
+    CGFloat height = image.size.height;
+    CGFloat scaleFactor;
+    CGSize targetSize = CGSizeMake(targetWidth, targetHeight);
+    
+    CGFloat widthFactor = targetWidth / width;
+    CGFloat heightFactor = targetHeight / height;
+    if (widthFactor > heightFactor) {
+        scaleFactor = widthFactor;
+    } else {
+        scaleFactor = heightFactor;
+    }
+    
+    CGFloat scaledWidth = width * scaleFactor;
+    CGFloat scaledHeight = height * scaleFactor;
+    CGPoint thumbnailPoint = CGPointMake(0, 0);
+    if (widthFactor > heightFactor)
+    {
+        thumbnailPoint.y = (targetHeight - scaledHeight) * 0.5;
+    }
+    else
+    {
+        if (widthFactor < heightFactor)
+        {
+            thumbnailPoint.x = (targetWidth - scaledWidth) * 0.5;
+        }
+    }
+    
+    UIGraphicsBeginImageContext(targetSize);
+    CGRect thumbnailRect = CGRectMake(thumbnailPoint.x, thumbnailPoint.y, scaledWidth, scaledHeight);
+    [image drawInRect:thumbnailRect];
+    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    
+    return newImage;
 }
 
 #pragma mark - segue
