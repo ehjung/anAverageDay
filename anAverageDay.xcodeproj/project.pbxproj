@@ -23,6 +23,7 @@
 		AC1DF14218EC865800DE7E1A /* anAverageDayTests.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1DF14118EC865800DE7E1A /* anAverageDayTests.m */; };
 		AC1DF14D18EC8C2F00DE7E1A /* FormViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1DF14C18EC8C2F00DE7E1A /* FormViewController.m */; };
 		AC1DF15018ECA9D800DE7E1A /* Entry.m in Sources */ = {isa = PBXBuildFile; fileRef = AC1DF14F18ECA9D800DE7E1A /* Entry.m */; };
+		AC822F261905E2F600AF742F /* ResizeImage.m in Sources */ = {isa = PBXBuildFile; fileRef = AC822F251905E2F600AF742F /* ResizeImage.m */; };
 		AC8331C318FD75D10001B703 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC8331C218FD75D10001B703 /* QuartzCore.framework */; };
 		AC88C2FE18F1C52900228C60 /* EntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC88C2FD18F1C52900228C60 /* EntryViewController.m */; };
 		AC90B59018F6FC7C00D05DF9 /* CameraViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AC90B58F18F6FC7C00D05DF9 /* CameraViewController.m */; };
@@ -64,6 +65,8 @@
 		AC1DF14E18ECA9D800DE7E1A /* Entry.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Entry.h; sourceTree = "<group>"; };
 		AC1DF14F18ECA9D800DE7E1A /* Entry.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Entry.m; sourceTree = "<group>"; };
 		AC4AAB2918F3328C00B14E34 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		AC822F241905E2F600AF742F /* ResizeImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResizeImage.h; sourceTree = "<group>"; };
+		AC822F251905E2F600AF742F /* ResizeImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ResizeImage.m; sourceTree = "<group>"; };
 		AC8331C218FD75D10001B703 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		AC88C2FC18F1C52900228C60 /* EntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryViewController.h; sourceTree = "<group>"; };
 		AC88C2FD18F1C52900228C60 /* EntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EntryViewController.m; sourceTree = "<group>"; };
@@ -136,6 +139,8 @@
 			children = (
 				AC1DF12218EC865800DE7E1A /* AppDelegate.h */,
 				AC1DF12318EC865800DE7E1A /* AppDelegate.m */,
+				AC822F241905E2F600AF742F /* ResizeImage.h */,
+				AC822F251905E2F600AF742F /* ResizeImage.m */,
 				AC1DF12518EC865800DE7E1A /* Main.storyboard */,
 				AC90B58E18F6FC7C00D05DF9 /* CameraViewController.h */,
 				AC90B58F18F6FC7C00D05DF9 /* CameraViewController.m */,
@@ -284,6 +289,7 @@
 				AC1DF12418EC865800DE7E1A /* AppDelegate.m in Sources */,
 				AC1DF12A18EC865800DE7E1A /* MasterViewController.m in Sources */,
 				AC1DF12018EC865800DE7E1A /* main.m in Sources */,
+				AC822F261905E2F600AF742F /* ResizeImage.m in Sources */,
 				AC90B59018F6FC7C00D05DF9 /* CameraViewController.m in Sources */,
 				AC1DF14D18EC8C2F00DE7E1A /* FormViewController.m in Sources */,
 			);

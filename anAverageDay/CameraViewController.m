@@ -8,6 +8,7 @@
 
 #import "CameraViewController.h"
 #import "FormViewController.h"
+#import "ResizeImage.h"
 
 @interface CameraViewController ()
 
@@ -82,7 +83,7 @@
      {
          NSData *imageData = [AVCaptureStillImageOutput jpegStillImageNSDataRepresentation:imageSampleBuffer];
          UIImage *image = [[UIImage alloc] initWithData:imageData];
-         image = [FormViewController scaleThenCropImage:image targetHeight:175 targetWidth:275];
+         image = [[ResizeImage sharedResizeImage] resizeImage:image targetHeight:175 targetWidth:275];
          [self.imageView setImage:image];
 	 }];
 }

@@ -8,6 +8,7 @@
 
 #import "FormViewController.h"
 #import "CameraViewController.h"
+#import "ResizeImage.h"
 
 @implementation FormViewController
 
@@ -29,7 +30,7 @@
     self.entry.title = self.titleTextField.text;
     self.entry.date = [self getDateWithTime:NO];
     if (self.photoImageView.image != nil) {
-        self.entry.thumbnail = [FormViewController scaleThenCropImage:self.photoImageView.image targetHeight:90 targetWidth:90];
+        self.entry.thumbnail = [[ResizeImage sharedResizeImage] resizeImage:self.photoImageView.image targetHeight:90 targetWidth:90];
     }
     self.entry.photo = self.photoImageView.image;
     
@@ -186,46 +187,6 @@
     } else {
         return 60;
     }
-}
-
-#pragma mark - image resizing
-
-+ (UIImage *)scaleThenCropImage:(UIImage *)image targetHeight:(CGFloat)targetHeight targetWidth:(CGFloat)targetWidth {
-    CGFloat width = image.size.width;
-    CGFloat height = image.size.height;
-    CGFloat scaleFactor;
-    CGSize targetSize = CGSizeMake(targetWidth, targetHeight);
-    
-    CGFloat widthFactor = targetWidth / width;
-    CGFloat heightFactor = targetHeight / height;
-    if (widthFactor > heightFactor) {
-        scaleFactor = widthFactor;
-    } else {
-        scaleFactor = heightFactor;
-    }
-    
-    CGFloat scaledWidth = width * scaleFactor;
-    CGFloat scaledHeight = height * scaleFactor;
-    CGPoint thumbnailPoint = CGPointMake(0, 0);
-    if (widthFactor > heightFactor)
-    {
-        thumbnailPoint.y = (targetHeight - scaledHeight) * 0.5;
-    }
-    else
-    {
-        if (widthFactor < heightFactor)
-        {
-            thumbnailPoint.x = (targetWidth - scaledWidth) * 0.5;
-        }
-    }
-    
-    UIGraphicsBeginImageContext(targetSize);
-    CGRect thumbnailRect = CGRectMake(thumbnailPoint.x, thumbnailPoint.y, scaledWidth, scaledHeight);
-    [image drawInRect:thumbnailRect];
-    UIImage *newImage = UIGraphicsGetImageFromCurrentImageContext();
-    UIGraphicsEndImageContext();
-    
-    return newImage;
 }
 
 #pragma mark - segue
