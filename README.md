@@ -2,7 +2,7 @@ Have you ever had those completely mundane days that were just so ordinary that 
 
 An IOS app created to experiment for fun.
 
-![Alt text](IMG_0022.PNG?raw=true)
+![Alt text](IMG_0022.png?raw=true)
 ![Alt text](IMG_0023.PNG?raw=true)
 ![Alt text](IMG_0024.PNG?raw=true)
 ![Alt text](IMG_0025.PNG?raw=true)
