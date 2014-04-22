@@ -73,13 +73,12 @@ static NSString * entryCellIdentifier = @"EntryCell";
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSMutableAttributedString *entryDetail = [self.entry.content objectAtIndex:indexPath.section];
-    NSString *cellText = [entryDetail string];
-    UIFont *cellFont = [UIFont fontWithName:@"HelveticaNeue-Light" size:16.0];
+    NSString *cellText = [[self.entry.content objectAtIndex:indexPath.section] string];
+    UIFont *cellFont = [UIFont fontWithName:@"HelveticaNeue-Thin" size:16.0];
     CGSize constraintSize = CGSizeMake(280.0f, MAXFLOAT);
 
     CGSize sizeOfText = [cellText sizeWithFont:cellFont constrainedToSize:constraintSize lineBreakMode:NSLineBreakByWordWrapping];
-    return sizeOfText.height+30;
+    return round(sizeOfText.height) + 20;
 }
 
 @end
