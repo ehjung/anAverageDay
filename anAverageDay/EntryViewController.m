@@ -64,11 +64,22 @@ static NSString * entryCellIdentifier = @"EntryCell";
     if (cell == nil) {
         cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:entryCellIdentifier];
     }
-    
     NSMutableAttributedString *entryDetail = [self.entry.content objectAtIndex:indexPath.section];
+    cell.textLabel.numberOfLines = 0;
     cell.textLabel.attributedText = entryDetail;
+    [cell.textLabel sizeToFit];
 
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath {
+    NSMutableAttributedString *entryDetail = [self.entry.content objectAtIndex:indexPath.section];
+    NSString *cellText = [entryDetail string];
+    UIFont *cellFont = [UIFont fontWithName:@"HelveticaNeue-Light" size:16.0];
+    CGSize constraintSize = CGSizeMake(280.0f, MAXFLOAT);
+
+    CGSize sizeOfText = [cellText sizeWithFont:cellFont constrainedToSize:constraintSize lineBreakMode:NSLineBreakByWordWrapping];
+    return sizeOfText.height+30;
 }
 
 @end
